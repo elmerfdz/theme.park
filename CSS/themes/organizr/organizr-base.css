@@ -384,7 +384,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
         color: white !important;
     }
   .label-info {
-      background: var(--link-color);
+      background: var(--custom-buttons-color);
   }
   .white-box	{
       background: var(--main-bg-color);
@@ -480,7 +480,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
       border: white !important; 
   }
   .progress-bar-info {
-      background: var(--link-color) !important;
+      background: var(--custom-buttons-color) !important;
   }
   .progress-bar-inverse, .progress {
       background: rgba(0, 0, 0, 0.25) !important;
