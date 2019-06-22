@@ -310,10 +310,12 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
   }
   th.fc-day-header.fc-widget-header.fc-today {
       background-color:rgba(0, 0, 0, 0.25) !important;
+      color: var(--highlights-color);
+
     }
-  .fc-widget-content.fc-today {
+  /*.fc-widget-content.fc-today {
       background-color: rgba(255, 255, 255, 0.25) !important;
-    }
+    }*/
   .fc-popover {
         background: var(--modal-bg-color);
     }   
