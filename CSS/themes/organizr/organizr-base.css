@@ -384,7 +384,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
         color: white !important;
     }
   .label-info {
-      background: var(--custom-buttons-color);
+      background: var(--link-color) !important;
   }
   .white-box	{
       background: var(--main-bg-color);
