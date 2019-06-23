@@ -1,10 +1,10 @@
 <h1 align="center">
-    <img src="https://i.imgur.com/nXhejME.png">
+    <img src="https://i.imgur.com/OkX6Zup.png">
 </h1>
 <p align="center">
   A collection of themes/skins for use in conjunction with <a href="https://github.com/causefx/Organizr/" target="_blank">Organizr</a>
 <p align="center">
-<a href="https://www.buymeacoffee.com/oY5Nk8GHK" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>	
+<a href="https://www.buymeacoffee.com/oY5Nk8GHK" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >   </a><a href="https://discord.gg/HM5uUKU" rel="noopener"><img class="alignnone" title="theme.park!" src="https://img.shields.io/badge/theme.park-discord-blue.svg" alt="" height="37" /></a>	
     <br />
     <br />
     <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/sonarrv3.png" alt="Screen Shot 1" width="49.15%" />
@@ -415,6 +415,18 @@ And add this in custom HTML in Organizr:
 <iframe class="iframe" frameborder="0" src="https://monitorr.domain.com/index.min.php"></iframe>
 </div>
 ```
+
+***
+
+# Logarr (alpha only) (WIP)
+
+Custom [Logarr](https://github.com/Monitorr/logarr/tree/alpha) CSS for consistent UI in [Organizr](https://github.com/causefx/Organizr).
+
+![](https://raw.githubusercontent.com/goldenpipes/theme.park/master/Screenshots/logarr-plex.png)
+
+Install via subfilter, logarr custom css, or by over writing the default 'logarr.css' in your `webserver/logarr/css` directory.
+
+#### the css is named `logarr-plex.css`
 
 ***
 
