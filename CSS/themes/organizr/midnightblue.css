@@ -20,7 +20,7 @@
     --link-color: #2CABE3; 
     --custom-buttons-color: radial-gradient(ellipse at center, #000066 0%, #2CABE3 100%) center center/cover no-repeat fixed;
     --hompage-item-hover: radial-gradient(ellipse at center, rgba(0, 150, 136, 0.33) 0%, #1E1F32 100%) center center/cover no-repeat fixed; 
-    --notification-box-line: #F44336;
+    --notification-box-line: #9e67f4;
     --highlights-color: #185DAA;
 
     --calendar-tv-premier: #FFEB3B;
@@ -31,4 +31,3 @@
     --calendar-movie-available: #53e69d;
     --calendar-movie-unreleased: #eeeeee; 
   }
-  
