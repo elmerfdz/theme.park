@@ -60,10 +60,10 @@ html {
   #page-wrapper {
   background: var(--main-bg-color) !important;
   }
-  /* Update bar 
+  /* Update bar */
   .progress-bar-primary {
 	background: var(--modal-bg-color);
-  }  */
+  }  
   /* Lockscreen */
   .lock-screen {
     background: var(--main-bg-color) !important;
@@ -108,6 +108,9 @@ html {
   }
   #side-menu li a.active {
     box-shadow: inset 4px 0 0 0 var(--link-color);
+}
+.label-inverse {
+    background: var(--custom-buttons-color);
 }
   /*input form control dropdown*/
 .form-control, select {
@@ -321,8 +324,9 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
   }
    /* custom buttons */
   .cbutton {
-      border: none;
       background-color: rgba(255, 255, 255, 0.2) !important;
+      border-radius: 3px !important;
+      border-color: transparent !important;
   }
   
    /* Calendar */
@@ -417,7 +421,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
         color: white !important;
     }
   .label-info {
-      background: var(--highlights-color);
+      background: var(--custom-buttons-color);
   }
   .white-box	{
       background: var(--main-bg-color);
@@ -483,11 +487,9 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
       background: var(--modal-bg-color) !important;
       border-bottom: transparent;
   }
-/*
   .iziToast.update-notify>.iziToast-body .iziToast-icon, .iziToast.success-notify>.iziToast-body .iziToast-icon {
     color: var(--link-color) !important;
 }
-*/
 .iziToast:after {
     background: var(--modal-bg-color) !important;
 }
@@ -515,7 +517,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
       border: white !important; 
   }
   .progress-bar-info {
-      background: var(--highlights-color) !important;
+      background: rgba(255, 255, 255, 0.25) !important;
   }
   .progress-bar-inverse, .progress {
       background: rgba(0, 0, 0, 0.25) !important;
