@@ -362,3 +362,7 @@ table.display td:hover a {
 .btn-dark:active, .btn-dark.active, .open > .dropdown-toggle.btn-dark, .btn-dark.active:focus {
     background-color: var(--default-button-color);
 }
+
+.btn-dark:hover {
+    background-color: var(--default-button-color-hover);
+}
