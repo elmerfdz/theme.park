@@ -331,7 +331,7 @@ span > a.active, .stacked-configs > li > span > span.active {
 /*custom ef css*/
 .dashboard-stats-info-item .sub-count{
     color: var(--default-button-color); 
-    font-weight: bold;    
+    font-weight: bolder;    
 }
 
 .nav > li.active > a, .nav > li.active > a:hover, .nav > li.active > a:focus {
@@ -349,4 +349,12 @@ span > a.active, .stacked-configs > li > span > span.active {
 
 #menu_link_show_advanced_settings.active {
     background-color: var(--progress-color);
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: var(--progress-color);
+}
+
+table.display td:hover a {
+    color: var(--default-button-color);
 }
