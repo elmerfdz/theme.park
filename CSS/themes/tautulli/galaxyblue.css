@@ -12,8 +12,12 @@
 /*			      https://github.com/gilbN/theme.park			 */
 
 /* TAUTULLI DARK THEME */
-@import url(https://gilbn.github.io/theme.park/CSS/themes/tautulli/tautulli-base.css);
+@import url(https://gilbn.github.io/theme.park/CSS/themes/tautulli/tautulli-base-ef.css);
 :root {
     --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
-    --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;  
+    --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
+
+    --default-button-color: #d31256;
+    --default-button-color-hover: #eb145f;
+    --progress-color: #d31256;  
   }
