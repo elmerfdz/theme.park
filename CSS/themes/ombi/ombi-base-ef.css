@@ -250,7 +250,7 @@ background: var(--modal-bg-color);
 }
 
 table.table>thead>tr>th.active {
-    background-color: var(--default-button-color);
+    background-color: var(--default-button-color) !important;
 }
 
 a.active {
@@ -263,5 +263,9 @@ a.active {
 
 .ui-state-active {
     background-color: var(--default-button-color) !important;
-    color: #000!important;
+    color: #000 !important;
+}
+
+.navbar-default .navbar-brand {
+    color: var(--default-button-color) !important;
 }
