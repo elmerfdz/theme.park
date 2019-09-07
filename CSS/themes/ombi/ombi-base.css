@@ -1,0 +1,234 @@
+
+/*    dP   dP                                                                  dP        */
+/*    88   88                                                                  88        */
+/*  d8888P 88d888b. .d8888b. 88d8b.d8b. .d8888b.    88d888b. .d8888b. 88d888b. 88  .dP   */
+/*    88   88'  `88 88ooood8 88'`88'`88 88ooood8    88'  `88 88'  `88 88'  `88 88888"    */
+/*    88   88    88 88.  ... 88  88  88 88.  ...    88.  .88 88.  .88 88       88  `8b.  */
+/*    dP   dP    dP `88888P' dP  dP  dP `88888P' 88 88Y888P' `88888P8 dP       dP   `YP  */
+/*                                                  88                                   */
+/*                                                  dP					 */
+
+/*		   		        Made by @gilbN					 */
+/*			      https://github.com/gilbN/theme.park			 */
+
+body {
+    background: var(--main-bg-color);
+}
+  /* Scrollbar */  
+  @media only screen and (min-width: 768px) {  
+    html {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    body {
+        overflow-y: auto;
+        height: 100%;
+        background: var(--main-bg-color)
+    }
+}
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+    ::-webkit-scrollbar-thumb {
+        min-height: 50px;
+        border: 3px solid transparent;
+        border-radius: 8px;
+        background-color: hsla(0,0%,100%,.2);
+        background-clip: padding-box;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        min-height: 50px;
+        border: 3px solid transparent;
+        border-radius: 8px;
+        background-color: hsla(0,0%,100%,.5);
+        background-clip: padding-box;
+    }   
+/* Navbar */
+@media (max-width: 924px) {
+    .collapse.in {
+        box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.7);
+    }
+    }
+
+.navbar-default {
+    background: var(--main-bg-color);
+    border-color: #FFF;
+}
+.nav-tabs {
+    border-bottom: 1px solid transparent;
+    margin-bottom: 3px !important;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.navbar-default .navbar-nav>.open>a {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+.ui-tooltip .ui-tooltip-text{
+background-color:var(--modal-bg-color) !important;
+}
+
+/* Search bar */
+.search-bar-background[_ngcontent-c1] {
+    border-radius: 3px;
+    background-color: transparent !important;
+}
+.search-bar-background[_ngcontent-c2] {
+    background-color: transparent;
+}
+.form-control-custom {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+	border-radius: 0px;
+}
+.right-radius {
+    border-radius: 0px;
+}
+.input-group-addon {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-bottom: 2px;
+}
+
+.nav-tabs.nav-justified {
+    margin-bottom: 3px;
+}
+@media (max-width: 978px) {
+.form-control-search[_ngcontent-c1] {
+    width: -webkit-fill-available !important;
+}
+}
+
+@media (min-width: 768px) {
+.nav-tabs.nav-justified>li>a {
+    border-bottom: none;
+}
+}
+@media (min-width: 979px) {
+.form-control-search[_ngcontent-c1] {
+    width: 100%;
+}
+}
+
+/* Expand season request */
+.content-space[_ngcontent-c3] {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.25);
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.table-hover>tbody>tr:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+table.table>thead>tr>th.active {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+/*filter */
+.ui-widget-content {
+    background: var(--main-bg-color) !important;
+}
+.ui-state-active {
+    color: #ffffff!important;
+	background-color: rgba(0, 0, 0, 0.25)!important;
+}
+.ui-state-default {
+    border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+/*dropdown menu */
+.dropdown-menu {
+    background: var(--modal-bg-color);
+}
+.dropdown-menu>li>a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.navbar-nav>li>.dropdown-menu {
+    width: 163.5px;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Settings */
+hr {
+    border: 1px dashed #d7d7d7;
+}
+
+/* Buttons */
+.btn-primary-outline, .btn-primary-outline.active, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline:focus, .btn-primary-outline:hover, .open>.btn-primary-outline.dropdown-toggle {
+    color: #ffffff!important;
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border-color: rgba(0, 0, 0, 0)!important;
+    outline: none !important; 
+}
+
+.btn-primary-outline:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+	border-color: #00000000!important;
+}
+.btn-link {
+    color: #ffffff;
+}
+.btn-link:focus, .btn-link:hover {
+    color: #ddd;
+}
+.input-group-addon .btn-group .btn {
+    outline: none;
+}
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    margin-left: 3px;
+}
+/* Settings menu */
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border: 1px solid #00000000 !important;
+    border-radius: 3px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border: 1px solid #00000000 !important;
+    border-radius: 3px;
+}
+.nav-tabs>li>a:hover {
+    border-color: transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-color: #00000000;
+}
+.panel {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #ebebeb;
+    padding: 10px 15px;
+    border-bottom: 1px solid #00000000;
+}
+a.active {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.ui-state-highlight {
+background: var(--modal-bg-color);
+}

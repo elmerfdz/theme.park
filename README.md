@@ -2,221 +2,354 @@
     <img src="https://i.imgur.com/OkX6Zup.png">
 </h1>
 <p align="center">
-  A collection of themes/skins for use in conjunction with <a href="https://github.com/causefx/Organizr/" target="_blank">Organizr</a>
+  A collection of themes/skins for use in conjunction with <a href="https://github.com/causefx/Organizr/" target="_blank">Organizr</a> or standalone.
 <p align="center">
-<a href="https://www.buymeacoffee.com/oY5Nk8GHK" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >   </a><a href="https://discord.gg/HM5uUKU" rel="noopener"><img class="alignnone" title="theme.park!" src="https://img.shields.io/badge/theme.park-discord-blue.svg" alt="" height="37" /></a>	
+<a href="https://www.buymeacoffee.com/oY5Nk8GHK" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >   </a><a href="https://discord.gg/HM5uUKU" rel="noopener"><img class="alignnone" title="theme.park!" src="https://img.shields.io/badge/chat-Discord-blue.svg?style=for-the-badge&logo=discord" alt="" height="37" /></a>
+ </a><a href="https://technicalramblings.com/" rel="noopener"><img class="alignnone" title="technicalramblings!" src="https://img.shields.io/badge/blog-technicalramblings.com-informational.svg?style=for-the-badge" alt="" height="37" /></a>
     <br />
     <br />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/sonarrv3.png" alt="Screen Shot 1" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/graforg/grafana-1.png" alt="Screen Shot 2" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/plexorg/plexorg.png" alt="Screen Shot 3" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/plpp/plpp.png" alt="Screen Shot 4" width="49.15%" />
+    <img src="/Screenshots/orgarr/sonarrv3.png" alt="Screen Shot 1" width="49.15%" />
+    <img src="/Screenshots/graforg/grafana-1.png" alt="Screen Shot 2" width="49.15%" />
+    <img src="/Screenshots/plexorg/plexorg.png" alt="Screen Shot 3" width="49.15%" />
+    <img src="/Screenshots/plpp/plpp.png" alt="Screen Shot 4" width="49.15%" />
 </p>
 
-## Setup
+# Setup
 
-### Subfilter
+All apps have 5 themes to choose from.
+`https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/<THEME_NAME>.css`
+```
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+Example: `https://gilbn.github.io/theme.park/CSS/themes/sonarr/dark.css`
 
-As  most of these apps doesn't have support for custom CSS you can get around that by using [subfilter](http://nginx.org/en/docs/http/ngx_http_sub_module.html) in Nginx.
+As  most of these apps doesn't have support for custom CSS you can get around that by using [subfilter](http://nginx.org/en/docs/http/ngx_http_sub_module.html) in Nginx or a browser addon called Stylus.
 
+## Subfilter method
+### Nginx
 Add this to your reverse proxy:
 
 ```nginx
 proxy_set_header Accept-Encoding "";
 sub_filter
 '</head>'
-'<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/CUSTOM_CSS.css">
+'<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/THEME.css">
 </head>';
 sub_filter_once on;
 ```
-Where `CUSTOM_CSS` is the name of the theme. e.g. `nzbget-plex.css`
+Where `APP_NAME` is the app you want to theme and `THEME.css` is the name of the theme. e.g. `aquamarine.css`
 
-Here is a complete example:
-
-<details><summary>Expand</summary>
-
+#### Example:
 ```nginx
-# REDIRECT HTTP TRAFFIC TO https://[domain.com]
-server {
-    listen 80;
-    server_name plpp.domain.com;
-    return 301 https://$server_name$request_uri;
-}
-server {  
-    listen 443 ssl http2;
-    server_name plpp.domain.com;
-
-#SSL settings
-    include /config/nginx/ssl.conf
-
-location / {
-    proxy_pass http://192.168.1.2:8701;
+location /sonarr {
+    proxy_pass http://localhost:8989/sonarr;
     include /config/nginx/proxy.conf;
 	proxy_set_header Accept-Encoding "";
 	sub_filter
 	'</head>'
-	'<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/plpporg.css">
+	'<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/sonarr/plex.css">
 	</head>';
 	sub_filter_once on;
   }
-}
 ```
-</details>
 
-## [Feature requests](http://feathub.com/gilbN/theme.park)
-[![Feature Requests](http://feathub.com/gilbN/theme.park?format=svg)](http://feathub.com/gilbN/theme.park)
+### Apache (Untested)
+```apache
+AddOutputFilterByType SUBSTITUTE text/html
+   Substitute 's|</head> '<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/THEME.css">
+</head>';|'
+  ```
+
+#### Example:
+```apache
+<Location /sonarr>
+    ProxyPass http://localhost:8989/sonarr
+    ProxyPassReverse http://localhost:8989/sonarr
+AddOutputFilterByType SUBSTITUTE text/html
+   Substitute 's|</head> '<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/sonarr/plex.css">
+</head>';|'
+  </Location>
+  ```
+
+## Stylus method
+Stylus is a browser extention that can inject custom css to the webpage of your choosing.
+
+Add this in the style page:
+
+```css
+@import "https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/THEME.css";
+```
+Example:  `@import "https://gilbn.github.io/theme.park/CSS/themes/sonarr/dark.css";`
+
+Link to Chrome extention: https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en
+Link to Firefox extention: https://addons.mozilla.org/en-US/firefox/addon/styl-us/
+
+## [Feature requests](https://feathub.com/gilbN/theme.park)
+[![Feature Requests](https://feathub.com/gilbN/theme.park?format=svg)](http://feathub.com/gilbN/theme.park)
+
+## Current themes in the repo:
+<ul>
+<li><a href="https://github.com/gilbN/theme.park#sonarr-v2v3---radarr---lidarr---bazarr-themes">Sonarr</a></li>
+<li><a href="https://github.com/gilbN/theme.park#sonarr-v2v3---radarr---lidarr---bazarr-themes">Radarr</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#sonarr-v2v3---radarr---lidarr---bazarr-themes">Lidarr</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#sonarr-v2v3---radarr---lidarr---bazarr-themes">Bazarr</a></li>
+<li><a href="https://github.com/gilbN/theme.park#plex-themes">Plex</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#ombi-themes">Ombi</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#tautulli-themes">Tautulli</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#organizr-hotline-and-marine-theme">Organizr</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#grafana-themes">Grafana</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#sabnzbd-themes">Sabnzbd</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#nzbget-themes">Nzbget</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#nzbhydra2-themes">NZBHydra2</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#deluge-themes">Deluge</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#qbittorrent-themes">qBittorrent</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#guacamole-themes">Guacamole</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#rutorrent-themes">ruTorrent</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#netdata-themes">Netdata</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#jackett-themes">Jackett</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#html5-speedtest-themes">html5speedtest</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#filebrowser-themes">Filebrowser</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#monitorr-themes">Monitorr</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#logarr-alpha-version-themes">Logarr</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#php-library-presenter-themes">PLPP</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#synclounge-themes">Synclounge</a></li>
+<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#the-lounge-themes">The Lounge</a></li>
+</ul>
 
 ***
 # Organizr Hotline and Marine theme
 Custom [Organizr](https://github.com/causefx/Organizr/) themes.
 <p align="center">
+<<<<<<< HEAD
+    <img src="/Screenshots/organizr-themes/organizr-hotline-theme2.png" alt="Screen Shot 1" width="49.15%" />
+    <img src="/Screenshots/organizr-themes/organizr-marine-theme2.png" alt="Screen Shot 2" width="49.15%" />
+    <img src="/Screenshots/organizr-themes/organizr-hotline-theme-login.png" alt="Screen Shot 3" width="49.15%" />
+    <img src="/Screenshots/organizr-themes/organizr-marine-theme-login.png" alt="Screen Shot 4" width="49.15%" />	
+=======
     <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-hotline-theme2.png" alt="Screen Shot 1" width="49.15%" />
     <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme2.png" alt="Screen Shot 2" width="49.15%" />
     <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-hotline-theme-login.png" alt="Screen Shot 3" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme-login.png" alt="Screen Shot 4" width="49.15%" />	
+    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme-login.png" alt="Screen Shot 4" width="49.15%" />
+>>>>>>> dc08672102aaec165f6bec623ed510c6c0249044
 </p>
 
-These themes are still a WIP so bugs may occur. Please make an issue if you find one. 
+
+Aquamarine are the colors from https://heimdall.site that I fell in love with.
+All themes are highly customizable in regards of which radial gradient color combination you want.
 
 #### Installation: Themes can be found in the "Theme Marketplace" in Organizr.
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-hotline-theme.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-hotline-theme-login.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme-login.png"></img>
+<img src="/Screenshots/organizr-themes/organizr-hotline-theme.png"></img>
+<img src="/Screenshots/organizr-themes/organizr-hotline-theme-login.png"></img>
+<img src="/Screenshots/organizr-themes/organizr-marine-theme.png"></img>
+<img src="/Screenshots/organizr-themes/organizr-marine-theme-login.png"></img>
 </p>
 </details>
 
 ***
+# Ombi Themes
 
-# PHP Library Presenter Dark/Plex Theme
+Custom [Ombi](https://github.com/tidusjar/Ombi) CSS.
 
-Custom [PLPP](https://github.com/Tensai75/plpp) CSS to match the [Organizr](https://github.com/causefx/Organizr) theme.
+**Install by adding `@import "https://gilbn.github.io/theme.park/CSS/themes/ombi/THEME_NAME.css";` in custom css**
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/plpp/plpp.png)
+```
+https://gilbn.github.io/theme.park/CSS/themes/ombi/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+![](/Screenshots/ombi/ombi.gif)
+***
+# Jackett Themes
 
-#### `plpporg.css` is a dark theme that matches Organizr.
+Custom [Jackett](https://github.com/Jackett/Jackett) CSS.
 
-#### `plpp-plex.css` is a Plex theme for PLPP
+```
+https://gilbn.github.io/theme.park/CSS/themes/jackett/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+![](/Screenshots/jackett/jackett.gif)
+***
+# PHP Library Presenter Themes
 
+Custom [PLPP](https://github.com/Tensai75/plpp) CSS.
+
+![](/Screenshots/plpp/plpp.gif)
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/plpp/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
 
 ***
-# Guacamole Dark/Plex Theme
+# Guacamole Themes
 
-Custom [Guacamole](https://guacamole.apache.org/) CSS to match the [Organizr](https://github.com/causefx/Organizr) theme.
+Custom [Guacamole](https://guacamole.apache.org/) CSS.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/guacorg/guacorg.png)
+![](/Screenshots/guacorg/guacamole.gif)
 
-#### `guacorg.css` is a dark theme that matches Organizr.
-
-#### `guacplex.css` is a Plex theme for Guacamole
+```
+https://gilbn.github.io/theme.park/CSS/themes/guacamole/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/guacorg/guac-1.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/guacorg/guac-2.png"></img>
+<img src="/Screenshots/guacorg/guac-1.png"></img>
+<img src="/Screenshots/guacorg/guac-2.png"></img>
 </p>
 </details>
 
 ***
 
-# Plex Organizr Theme
+# Plex Themes
 
-Custom [Plex](https://plex.tv) CSS to match the [Organizr](https://github.com/causefx/Organizr) theme.
+Custom [Plex](https://plex.tv) CSS.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/plexorg/plexorg.png)
+![](/Screenshots/plexorg/plex.gif)
 
-#### The `plexorg.css` theme is a dark theme that matches Organizr.
+```
+https://gilbn.github.io/theme.park/CSS/themes/plex/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+space-gray.css
+```
 
 ***
 
-# OrgArr - Sonarr v2/v3 - Radarr - Lidarr - Bazarr Dark/Plex Theme
+# Sonarr v2/v3 - Radarr - Lidarr - Bazarr Themes
 
-Custom [Sonarr V2 and V3](https://github.com/Sonarr/Sonarr)/[Radarr](https://github.com/Radarr/Radarr)/[Lidarr](https://github.com/Lidarr/Lidarr)/[Bazarr](https://github.com/morpheus65535/bazarr) CSS for consistent UI in [Organizr](https://github.com/causefx/Organizr)
+Custom [Sonarr V2 and V3](https://github.com/Sonarr/Sonarr)/[Radarr](https://github.com/Radarr/Radarr)/[Lidarr](https://github.com/Lidarr/Lidarr)/[Bazarr](https://github.com/morpheus65535/bazarr) CSS.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/sonarrv3.png)
+![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/orgarr.gif)
 
- 
+```
+https://gilbn.github.io/theme.park/CSS/themes/sonarr/XXX.css
+https://gilbn.github.io/theme.park/CSS/themes/radarr/XXX.css
+https://gilbn.github.io/theme.park/CSS/themes/lidarr/XXX.css
+https://gilbn.github.io/theme.park/CSS/themes/bazarr/XXX.css
+aquamarine.css
+hotline.css
+plex.css
+dark.css
+space-gray.css
+```
 
-Thank you iFelix18 for doing all the hard work! :)
-
-#### The `orgarr.css` theme is a dark theme that matches the Organizr dark theme.
-
-#### `orgarr-plex.css` If you want a regular Plex theme for your *arr setup, use the **`orgarr-plex.css`** instead.
+Thank you iFelix18 for doing all the hard work on v2! :)
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/sonarrv3-2.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/sonarrv3-3.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/1.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/2.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/orgarr/3.jpg"></img>
+<img src="/Screenshots/orgarr/sonarrv3-2.png"></img>
+<img src="/Screenshots/orgarr/sonarrv3-3.png"></img>
+<img src="/Screenshots/orgarr/1.jpg"></img>
+<img src="/Screenshots/orgarr/2.jpg"></img>
+<img src="/Screenshots/orgarr/3.jpg"></img>
 
 </p>
 </details>
 
 ***
 
-# NZBGet Dark/Plex Theme
+# NZBGet Themes
 
 Custom CSS for [Nzbget](https://github.com/nzbget/nzbget)
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/nzbget/nzbget-split.png)
+![](/Screenshots/nzbget/nzbget.gif)
 
-#### The `nzborg.css` theme is a dark theme that matches the Organizr dark theme.
-
-#### The `nzbget-plex.css` theme is a plex theme for NZBGet.
+```
+https://gilbn.github.io/theme.park/CSS/themes/nzbget/XXX.css
+aquamarine.css
+hotline.css
+plex.css
+dark.css
+space-gray.css
+```
 
 Thank you [ydkmlt84](https://github.com/ydkmlt84) for making the job easier :)
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/nzbget/nzbget1.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/nzbget/nzbget2.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/nzbget/nzbget-split-2.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/nzbget/nzbget3.png"></img>
+<img src="/Screenshots/nzbget/nzbget1.jpg"></img>
+<img src="/Screenshots/nzbget/nzbget2.jpg"></img>
+<img src="/Screenshots/nzbget/nzbget-split-2.png"></img>
+<img src="/Screenshots/nzbget/nzbget3.png"></img>
 </p>
 </details>
 
 ***
 
-# SABnzbd Dark/Plex Theme
+# SABnzbd Themes
 
 Custom CSS for [SABnzbd](https://github.com/sabnzbd/sabnzbd)
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sabnzbd/sabnzbd.png)
+![](/Screenshots/sabnzbd/sabnzbd.gif)
 
-#### Use the `sabnzbd_dark.css` for a dark theme that matches the Organizr dark theme.
-**Note: SABnzbd theme must be set to `Glitter`**
+```
+https://gilbn.github.io/theme.park/CSS/themes/sabnzbd/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
 
-#### Use the `sabnzbd_plex.css` for a dark theme that matches the Organizr dark theme.
 **Note: SABnzbd theme must be set to `Glitter`**
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sabnzbd/sabnzbd_dark_2.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sabnzbd/sabnzbd_dark_3.png"></img>
+<img src="/Screenshots/sabnzbd/sabnzbd_dark_2.png"></img>
+<img src="/Screenshots/sabnzbd/sabnzbd_dark_3.png"></img>
 </p>
 </details>
 
 ***
 
-# GrafOrg - Grafana Dark/Plex
+# Grafana Themes
 
 Custom [Grafana](https://github.com/grafana/grafana) CSS for [Organizr](https://github.com/causefx/Organizr) homepage integration and consistent UI.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/graforg/grafana-1.png)
+![](/Screenshots/graforg/grafana.gif)
 
-#### The `graforg.css` theme is a dark theme that matches the Organizr dark theme.
-#### `grafplex.css`: If you want a regular Plex theme for your Grafana setup, use the **`grafplex.css`** theme instead.
-#### For panel integration on the Organizr homepage you can use `graforg-dashboard.css` if you use the Plex theme in Organizr.
+```
+https://gilbn.github.io/theme.park/CSS/themes/grafana/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+organizr-dashboard.css
+```
+
+#### For panel integration on the Organizr homepage you can use `organizr-dashboard.css` if you use the Plex theme in Organizr. The theme is an "internal" theme that is meant to be used in an Organizr iframe as the background is set to transparent.
+NOTE: When viewing Grafana in Organizr iframe using `organizr-dashboard.css` it will follow the Organizr theme. When viewing it outside of Organizr iframe the background will be white ect. If you don't want this you can create two reverse proxies. One for grafana organizr homepage integration and one for the regular grafana theme.
+
 ### Check out https://technicalramblings.com/blog/spice-up-your-homepage-part-ii/
 
 ![](https://technicalramblings.com/wp-content/uploads/2019/01/orgdash.jpg)
@@ -224,23 +357,22 @@ Custom [Grafana](https://github.com/grafana/grafana) CSS for [Organizr](https://
 ### **TIP:**
 Click the `kiosk` button and use that link if you don't want to show the top bar and side bar inside Organizr! There are two modes, one where the side menu and variables ect disappear and one where just the panels are visible.
 
-https://grafana.technicalramblings.com/d/nLJXnLJiz/unraid-ups-dashboard?refresh=10s&orgId=1&kiosk=tv
-https://grafana.technicalramblings.com/d/nLJXnLJiz/unraid-ups-dashboard?refresh=10s&orgId=1&kiosk
+![](https://i.imgur.com/pVSKUzi.png)
 
 Check out my Varken dashboard here: https://grafana.com/dashboards/9558
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/graforg/1.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/graforg/2.jpg"></img>
+<img src="/Screenshots/graforg/1.jpg"></img>
+<img src="/Screenshots/graforg/2.jpg"></img>
 </p>
 </details>
 
 ### Custom HTML for Organizr Homepage
 
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/graforg/3.jpg)
+![](/Screenshots/graforg/3.jpg)
 
 <details><summary>Expand</summary>
 
@@ -254,7 +386,7 @@ Change the ***Panel name*** to what you want and the ***src*** to the panel URL.
 ```
 The URL can be found by clicking **share** on the panel you want to add.
 
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/graforg/4.png"></img>
+<img src="/Screenshots/graforg/4.png"></img>
 
 If you dont want the ***Panel name*** text, just remove the `<h5><span>` line entirely.
 
@@ -358,23 +490,29 @@ If you dont want the ***Panel name*** text, just remove the `<h5><span>` line en
 
 ***
 
-# NetOrg - Netdata Dark/Plex Theme
+# Netdata Themes
 
-Custom [Netdata](https://github.com/firehol/netdata) CSS for consistent UI in [Organizr](https://github.com/causefx/Organizr)
+Custom [Netdata](https://github.com/firehol/netdata) CSS.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/netorg/netdata-1.png)
+![](/Screenshots/netorg/netdata.gif)
 
-#### The `netorg.css` theme is an "internal" theme that is meant to be used in an Organizr iframe as the background is set to transparent. [The theme can be used to integrate Netadata on the Organizr Homepage](https://technicalramblings.com/blog/spice-up-your-homepage/)
+```
+https://gilbn.github.io/theme.park/CSS/themes/netdata/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+organizr-dashboard.css
+```
 
-#### `netplex.css` If you want a regular Plex theme for your Netdata setup, use the **`netplex.css`** instead.
-
-#### The `netorg-dark.css` theme is a dark theme that matches Organizr. 
+#### The `organizr-dashboard.css` theme is an "internal" theme that is meant to be used in an Organizr iframe as the background is set to transparent. [The theme can be used to integrate Netadata on the Organizr Homepage](https://technicalramblings.com/blog/spice-up-your-homepage/)
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/netorg/1.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/netorg/2.jpg"></img>
+<img src="/Screenshots/netorg/1.jpg"></img>
+<img src="/Screenshots/netorg/2.jpg"></img>
 </p>
 </details>
 
@@ -382,31 +520,39 @@ Custom [Netdata](https://github.com/firehol/netdata) CSS for consistent UI in [O
 
 ***
 
-# Monitorg - Monitorr Dark/Plex Theme
+# Monitorr Themes
 
 Custom [Monitorr](https://github.com/Monitorr/Monitorr) CSS for [Organizr](https://github.com/causefx/Organizr) homepage integration.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/monitorg/1-flat.jpg)
+![](/Screenshots/monitorg/monitorr.gif)
 
-#### The `monitorg.css` theme will mess with your Monitorr base theme. And it will hide the settings button. Go to /monitorr/settings.php for settings.  It is created purely for use with "minimum" version of the index.php `https://domain.com/monitorr/index.min.php` for Organizr homepage integration.
+```
+https://gilbn.github.io/theme.park/CSS/themes/monitorr/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+organizr-dashboard.css
+```
+
+#### The `organizr-dashboard.css` theme will mess with your Monitorr base theme. And it will hide the settings button. Go to /monitorr/settings.php for settings.  It is created purely for use with "minimum" version of the index.php `https://domain.com/monitorr/index.min.php` for Organizr homepage integration.
 **NOTE:**
-When viewing monitorr in Organizr iframe using `monitorg.css` it will follow the Organizr theme. When viewing it outside of Organizr iframe the background will be white ect. If you don't want this you can create two reverse proxies. One for monitorr organizr homepage integration and one for the monitorr dark/plex theme. And use subfilter on both instead of adding `@import "https://gilbn.github.io/theme.park/CSS/themes/monitorg.css";` in the monitorr custom css.
+When viewing monitorr in Organizr iframe using `organizr-dashboard.css` it will follow the Organizr theme. When viewing it outside of Organizr iframe the background will be white ect. If you don't want this you can create two reverse proxies. One for monitorr organizr homepage integration and one for the monitorr dark/plex theme. And use subfilter on both instead of adding `@import "https://gilbn.github.io/theme.park/CSS/themes/organizr-dashboard.css";` in the monitorr custom css.
 
-#### For the dark theme use `monitorg-dark.css`
-#### For the Plex theme use `monitorg-plex.css`
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/monitorg/2.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/monitorg/3.jpg"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/monitorg/4.jpg"></img>
+<img src="/Screenshots/monitorg/2.jpg"></img>
+<img src="/Screenshots/monitorg/3.jpg"></img>
+<img src="/Screenshots/monitorg/4.jpg"></img>
 </p>
 </details>
 
 Add this in the Monitorr custom css box:
 ```css
-@import "https://gilbn.github.io/theme.park/CSS/themes/monitorg.css";
+@import "https://gilbn.github.io/theme.park/CSS/themes/monitorr/THEME_NAME.css";
 ```
 And add this in custom HTML in Organizr:
 ```css
@@ -418,56 +564,249 @@ And add this in custom HTML in Organizr:
 
 ***
 
-# Logarr (alpha only) (WIP)
+# Logarr alpha version Themes
 
-Custom [Logarr](https://github.com/Monitorr/logarr/tree/alpha) CSS for consistent UI in [Organizr](https://github.com/causefx/Organizr).
+Custom [Logarr](https://github.com/Monitorr/logarr/tree/alpha) CSS.
 
-![](https://raw.githubusercontent.com/goldenpipes/theme.park/master/Screenshots/logarr-plex.png)
+![](/Screenshots/logarr/logarr.gif)
 
-Install via subfilter, logarr custom css, or by over writing the default 'logarr.css' in your `webserver/logarr/css` directory.
-
-#### the css is named `logarr-plex.css`
+```
+https://gilbn.github.io/theme.park/CSS/themes/logarr/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
 
 ***
 
-# Filebrowser - Dark Theme
+# Filebrowser Themes
 
-Custom [Filebrowser](https://github.com/filebrowser/filebrowser) CSS for consistent UI in [Organizr](https://github.com/causefx/Organizr).
+Custom [Filebrowser](https://github.com/filebrowser/filebrowser) CSS.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/filebrowser/filebrowser.png)
+![](/Screenshots/filebrowser/filebrowser.gif)
 
 Based on https://github.com/Archmonger/Blackberry-Themes/blob/master/Themes/Blackberry-Flat/bbf_filebrowser.css
 **https://github.com/Archmonger/Blackberry-Themes**
 
-#### The css is named `filebrowser_dark.css`
+```
+https://gilbn.github.io/theme.park/CSS/themes/filebrowser/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
 
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/filebrowser/filebrowser2.png"></img>
+<img src="/Screenshots/filebrowser/filebrowser2.png"></img>
 </p>
 </details>
 
 ***
 
-# HTML5 Speedtest Dark/Plex Theme
+# HTML5 Speedtest Themes
 
-Custom [HTML5 Speedtest](https://github.com/adolfintel/speedtest) CSS for consistent UI in [Organizr](https://github.com/causefx/Organizr).
+Custom [HTML5 Speedtest](https://github.com/adolfintel/speedtest) CSS.
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/html5speedtest/html5speedtest.png)
+![](/Screenshots/html5speedtest/speedtest.gif)
 
-#### The css files are named `html5speedtest_dark.css` and `html5speedtest_plex.css` 
+```
+https://gilbn.github.io/theme.park/CSS/themes/html5speedtest/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
 
 ### Screenshots
 <details><summary>Expand</summary>
 <p>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/html5speedtest/html5speedtest_dark.png"></img>
-<img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/html5speedtest/html5speedtest_plex.png"></img>
+<img src="/Screenshots/html5speedtest/html5speedtest_dark.png"></img>
+<img src="/Screenshots/html5speedtest/html5speedtest_plex.png"></img>
 </p>
 </details>
 
 ***
+# Tautulli Themes
+
+Custom [Tautulli](https://github.com/Tautulli/Tautulli) CSS.
+
+![](/Screenshots/tautulli/tautulli.gif)
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/tautulli/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+***
+# Deluge Themes
+
+Custom [Deluge](https://github.com/deluge-torrent/deluge) CSS.
+
+![](/Screenshots/deluge/deluge.gif)
+
+Based on https://github.com/halianelf/deluge-dark @halianelf Thanks for making the job easier!
+```
+https://gilbn.github.io/theme.park/CSS/themes/deluge/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+***
+# qBittorrent Themes
+
+Custom [qBitorrent](https://github.com/qbittorrent/qBittorrent) CSS.
+
+![](/Screenshots/qbittorrent/qbittorrent.gif)
+
+NOTE: You need to change or remove the CSP header.
+
+Add this in your reverse proxy:
+```nginx
+        proxy_hide_header   "x-webkit-csp";
+        proxy_hide_header   "content-security-policy";
+```
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/qbittorrent/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+### Screenshots
+<details><summary>Expand</summary>
+<p>
+<img src="/Screenshots/qbittorrent/qbit1.png"></img>
+<img src="/Screenshots/qbittorrent/qbit2.png"></img>
+<img src="/Screenshots/qbittorrent/qbit3.png"></img>
+<img src="/Screenshots/qbittorrent/qbit4.png"></img>
+<img src="/Screenshots/qbittorrent/qbit5.png"></img>
+</p>
+</details>
+
+***
+# ruTorrent Themes
+
+Custom [ruTorrent](https://github.com/Novik/ruTorrent) CSS.
+
+![](/Screenshots/rutorrent/rutorrent.gif)
+
+
+**Theme needs to be `Standard` in settings!**
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/rutorrent/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+### Screenshots
+<details><summary>Expand</summary>
+<p>
+<img src="/Screenshots/rutorrent/rutorrent1.png"></img>
+<img src="/Screenshots/rutorrent/rutorrent2.png"></img>
+<img src="/Screenshots/rutorrent/rutorrent3.png"></img>
+<img src="/Screenshots/rutorrent/rutorrent4.png"></img>
+<img src="/Screenshots/rutorrent/rutorrent5.png"></img>
+</p>
+</details>
+
+***
+# NZBhydra2 Themes
+
+Custom [NZBHydra](https://github.com/theotherp/nzbhydra2) CSS.
+
+![](/Screenshots/nzbhydra2/nzbhydra2.gif)
+
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/nzbhydra2/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+### Screenshots
+<details><summary>Expand</summary>
+<p>
+<img src="/Screenshots/nzbhydra2/nzbhydra1.png"></img>
+<img src="/Screenshots/nzbhydra2/nzbhydra2.png"></img>
+<img src="/Screenshots/nzbhydra2/nzbhydra3.png"></img>
+<img src="/Screenshots/nzbhydra2/nzbhydra4.png"></img>
+<img src="/Screenshots/nzbhydra2/nzbhydra5.png"></img>
+</p>
+</details>
+
+***
+# Synclounge Themes
+
+Custom [Synclounge](https://github.com/samcm/SyncLounge) CSS.
+
+![](/Screenshots/synclounge/synclounge.gif)
+
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/synclounge/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+### Screenshots
+<details><summary>Expand</summary>
+<p>
+<img src="/Screenshots/synclounge/synclounge1.png"></img>
+<img src="/Screenshots/synclounge/synclounge2.png"></img>
+<img src="/Screenshots/synclounge/synclounge3.png"></img>
+<img src="/Screenshots/synclounge/synclounge4.png"></img>
+<img src="/Screenshots/synclounge/synclounge5.png"></img>
+</p>
+</details>
+
+***
+# The Lounge Themes
+
+Custom [The Lounge](https://github.com/thelounge/thelounge) CSS.
+
+![](/Screenshots/thelounge/thelounge.gif)
+
+
+```
+https://gilbn.github.io/theme.park/CSS/themes/thelounge/XXX.css
+aquamarine.css
+hotline.css
+dark.css
+plex.css
+space-gray.css
+```
+### Screenshots
+<details><summary>Expand</summary>
+<p>
+<img src="/Screenshots/thelounge/thelounge1.png"></img>
+<img src="/Screenshots/thelounge/thelounge2.png"></img>
+<img src="/Screenshots/thelounge/thelounge3.png"></img>
+<img src="/Screenshots/thelounge/thelounge4.png"></img>
+<img src="/Screenshots/thelounge/thelounge5.png"></img>
+</p>
+</details>
+
 ### Honourable mentions:
 
 [leram84/layer.Cake](https://github.com/leram84/layer.Cake/)
@@ -480,4 +819,4 @@ Custom [HTML5 Speedtest](https://github.com/adolfintel/speedtest) CSS for consis
 
 [ydkmlt84/DarkerNZBget](https://github.com/ydkmlt84/DarkerNZBget)
 
-[Archmonger/Blackberry-Flat](https://github.com/Archmonger/Blackberry-Flat)
+[Archmonger/Blackberry-Themes](https://github.com/Archmonger/Blackberry-Themes)
