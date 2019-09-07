@@ -335,6 +335,7 @@ span > a.active, .stacked-configs > li > span > span.active {
 
 .nav > li.active > a, .nav > li.active > a:hover, .nav > li.active > a:focus {
     color: var(--default-button-color);
+    font-weight: bold;
 }
 
 .nav-settings > .active > a, .nav-settings > .active > a:hover, .nav-settings > .active > a:focus {
