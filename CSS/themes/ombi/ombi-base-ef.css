@@ -291,3 +291,7 @@ a>h4 {
     background-color: var(--default-button-color) !important;
     border-color: var(--default-button-color) !important;
 }
+
+.pace .pace-progress {
+    background: var(--default-button-color) !important;
+}
