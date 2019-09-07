@@ -16,8 +16,8 @@
 :root {
   --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
   --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
-  --button-color: #cc7b19;
-  --button-color-hover: #e59029;
-  --accent-color:  #e5a00d;
-  --accent-color-hover: #ffc107;
+  --button-color: #d31256;
+  --button-color-hover: #ed2c6f;
+  --accent-color:  #d31256;
+  --accent-color-hover: #ed2c6f;
   }
