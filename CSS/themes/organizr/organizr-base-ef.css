@@ -61,9 +61,11 @@ html {
   background: var(--main-bg-color) !important;
   }
   /* Update bar */
+  /*
   .progress-bar-primary {
 	background: var(--modal-bg-color);
-  }  
+  } 
+  */ 
   /* Lockscreen */
   .lock-screen {
     background: var(--main-bg-color) !important;
@@ -421,7 +423,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
         color: white !important;
     }
   .label-info {
-      background: var(--custom-buttons-color);
+      background: var(--highlights-color);
   }
   .white-box	{
       background: var(--main-bg-color);
@@ -487,9 +489,11 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
       background: var(--modal-bg-color) !important;
       border-bottom: transparent;
   }
+/*  
   .iziToast.update-notify>.iziToast-body .iziToast-icon, .iziToast.success-notify>.iziToast-body .iziToast-icon {
     color: var(--link-color) !important;
 }
+*/
 .iziToast:after {
     background: var(--modal-bg-color) !important;
 }
@@ -517,7 +521,7 @@ table.dataTable>tbody>tr:nth-of-type(even):hover {
       border: white !important; 
   }
   .progress-bar-info {
-      background: rgba(255, 255, 255, 0.25) !important;
+      background: var(--highlights-color) !important;
   }
   .progress-bar-inverse, .progress {
       background: rgba(0, 0, 0, 0.25) !important;
