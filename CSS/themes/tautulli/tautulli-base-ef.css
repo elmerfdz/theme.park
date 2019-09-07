@@ -358,3 +358,7 @@ span > a.active, .stacked-configs > li > span > span.active {
 table.display td:hover a {
     color: var(--default-button-color);
 }
+
+.btn-dark:active, .btn-dark.active, .open > .dropdown-toggle.btn-dark, .btn-dark.active:focus {
+    background-color: var(--default-button-color);
+}
