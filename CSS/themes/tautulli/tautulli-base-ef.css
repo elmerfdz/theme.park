@@ -339,4 +339,5 @@ span > a.active, .stacked-configs > li > span > span.active {
 
 .dashboard-activity-progress .progress-bar {
     background-color: var(--progress-color);
+    background-image: var(--progress-color);    
 }
