@@ -269,3 +269,7 @@ a.active {
 .navbar-default .navbar-brand {
     color: var(--default-button-color) !important;
 }
+
+a>h4 {
+    color: var(--default-button-color) !important;
+}
