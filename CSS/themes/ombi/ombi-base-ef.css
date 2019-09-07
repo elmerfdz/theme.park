@@ -232,3 +232,11 @@ a.active {
 .ui-state-highlight {
 background: var(--modal-bg-color);
 }
+
+.nav-tabs>li>a:hover {
+    border-color: var(--default-button-color-hover);
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: var(--default-button-color-hover);
+}
