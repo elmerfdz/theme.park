@@ -363,6 +363,6 @@ table.display td:hover a {
     background-color: var(--default-button-color);
 }
 
-.btn-dark:hover {
+.btn-dark.inactive:hover {
     background-color: var(--default-button-color-hover);
 }
