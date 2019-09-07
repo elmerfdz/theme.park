@@ -281,3 +281,8 @@ a>h4 {
 .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
     background-color: var(--default-button-color) !important;
 }
+
+.btn-primary-outline {
+    color: var(--default-button-color) !important;
+    border-color: var(--default-button-color) !important;
+}
