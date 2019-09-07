@@ -17,8 +17,8 @@
   --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
   --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;  
   --settings-accent-color: #f9be03;
-  --nav-button-color: #cc7b19;
-  --default-button-color: #cc7b19;
-  --default-button-color-hover: #e59029;
-  --default-button-color-active: #e59029;
+  --nav-button-color: radial-gradient(ellipse at top, #120A28 0%, #011628 100%) center center/cover no-repeat fixed;
+  --default-button-color: #d31256;
+  --default-button-color-hover: #eb145f;
+  --default-button-color-active: #eb145f;
   }
