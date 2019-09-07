@@ -254,7 +254,7 @@ table.table>thead>tr>th.active {
 }
 
 a.active {
-    background-color: var(--default-button-color);
+    background-color: var(--default-button-color) !important;
 }
 
 .ui-state-active {
