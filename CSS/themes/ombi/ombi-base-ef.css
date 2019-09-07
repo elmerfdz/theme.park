@@ -234,9 +234,13 @@ background: var(--modal-bg-color);
 }
 
 .nav-tabs>li>a:hover {
-    border-color: var(--default-button-color-hover);
+    border-color: var(--default-button-color-hover) !important;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
-    background-color: var(--default-button-color-hover);
+    background-color: var(--default-button-color-hover) !important;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background-color: var(--default-button-color) !important;
 }
