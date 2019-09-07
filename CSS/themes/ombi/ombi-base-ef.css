@@ -246,5 +246,22 @@ background: var(--modal-bg-color);
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: #fff;
+    color: #fff !important;
+}
+
+table.table>thead>tr>th.active {
+    background-color: var(--default-button-color);
+}
+
+a.active {
+    background-color: var(--default-button-color);
+}
+
+.ui-state-active {
+    color: #fff !important;
+}
+
+.ui-state-active {
+    background-color: var(--default-button-color) !important;
+    color: #000!important;
 }
