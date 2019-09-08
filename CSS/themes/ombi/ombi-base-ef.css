@@ -332,7 +332,7 @@ a.btn.btn-sm.btn-primary-outline:hover {
     background-color: var(--default-button-color) !important;
 }
 
-a.btn.btn-sm.btn-primary-outline.dropdown-toggle {
+a.btn.btn-sm.btn-primary-outline.dropdown-toggle:hover {
     background-color: var(--default-button-color) !important;
 }
 
