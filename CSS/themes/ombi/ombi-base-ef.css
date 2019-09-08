@@ -357,3 +357,10 @@ button.btn.btn-primary-outline:focus{
     color: white !important;
     border-color: var(--default-button-color) !important;
 }
+
+
+button.btn.btn-primary-outline.disabled.ng-star-inserted:active {
+    color: white !important;
+    border-color: var(--default-button-color) !important;
+    background-color: var(--default-button-color) !important;
+}
