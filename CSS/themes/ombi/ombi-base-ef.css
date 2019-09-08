@@ -320,10 +320,6 @@ a.ui-paginator-page.ui-paginator-element.ui-state-default.ui-corner-all.ng-star-
     color: var(--default-button-color) !important;
 }
 
-/*ui-growl-item-container ui-state-highlight ui-corner-all ui-shadow ui-growl-message-success ng-star-inserted {
-    color: var(--default-button-color) !important;
-}*/
-
 .ui-state-highlight {
     background: var(--default-button-color) !important;
 }
