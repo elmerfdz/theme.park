@@ -355,7 +355,7 @@ button.btn.btn-primary-outline:hover {
 button.btn.btn-primary-outline:focus{
     background-color: var(--default-button-color) !important;
     color: white !important;
-    border-color: var(--default-button-color) !important;
+    /*border-color: var(--default-button-color) !important;*/
 }
 
 
