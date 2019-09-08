@@ -307,5 +307,11 @@ button.btn.btn-primary-outline {
 }
 
 .input-addon, .input-group-addon {
-    color: var(--default-button-color);
+    color: var(--default-button-color) !important;
+}
+
+a.ui-paginator-page.ui-paginator-element.ui-state-default.ui-corner-all.ui-state-active.ng-star-inserted {
+    color: var(--default-button-color) !important;
+    border-color: var(--default-button-color) !important;
+    background-color: black !important;
 }
