@@ -332,6 +332,14 @@ a.btn.btn-sm.btn-primary-outline:hover {
     background-color: var(--default-button-color) !important;
 }
 
+a.btn.btn-sm.btn-primary-outline.dropdown-toggle {
+    background-color: var(--default-button-color) !important;
+}
+
 button.btn.btn-primary-outline.col-md-4.col-md-push-1:hover {
+    background-color: transparent !important;
+}
+
+button.btn.btn-primary-outline:hover {
     background-color: transparent !important;
 }
