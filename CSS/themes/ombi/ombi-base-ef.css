@@ -315,3 +315,7 @@ a.ui-paginator-page.ui-paginator-element.ui-state-default.ui-corner-all.ui-state
     border-color: var(--default-button-color) !important;
     background-color: black !important;
 }
+
+a.ui-paginator-page.ui-paginator-element.ui-state-default.ui-corner-all.ng-star-inserted {
+    color: var(--default-button-color) !important;
+}
