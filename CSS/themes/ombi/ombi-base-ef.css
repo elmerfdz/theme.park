@@ -342,7 +342,8 @@ a.btn.btn-sm.btn-primary-outline.dropdown-toggle:focus-within {
 }
 
 button.btn.btn-primary-outline.col-md-4.col-md-push-1:hover {
-    background-color: transparent !important;
+    background-color: var(--default-button-color) !important;
+    color: white !important;
 }
 
 button.btn.btn-primary-outline:hover {
