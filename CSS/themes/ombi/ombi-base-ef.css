@@ -364,3 +364,8 @@ button.btn.btn-primary-outline.disabled.ng-star-inserted:active {
     border-color: var(--default-button-color) !important;
     background-color: var(--default-button-color) !important;
 }
+
+
+.input-group-addon .btn-group .btn {
+   border-color: var(--default-button-color) !important;
+}
