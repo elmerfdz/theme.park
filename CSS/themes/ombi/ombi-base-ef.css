@@ -324,6 +324,7 @@ a.ui-paginator-page.ui-paginator-element.ui-state-default.ui-corner-all.ng-star-
     color: var(--default-button-color) !important;
 }*/
 
+
 .ui-state-highlight {
-    color: var(--default-button-color) !important;
+    background: var(--default-button-color) !important;
 }
