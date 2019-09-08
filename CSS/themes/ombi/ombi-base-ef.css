@@ -324,7 +324,10 @@ a.ui-paginator-page.ui-paginator-element.ui-state-default.ui-corner-all.ng-star-
     color: var(--default-button-color) !important;
 }*/
 
-
 .ui-state-highlight {
     background: var(--default-button-color) !important;
+}
+
+.btn-primary-outline.active, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline:focus, .btn-primary-outline:hover, .open>.btn-primary-outline.dropdown-toggle {
+    background-color: var(--default-button-color) !important;
 }
