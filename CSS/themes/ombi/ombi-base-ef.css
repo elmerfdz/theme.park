@@ -329,6 +329,11 @@ button.btn.btn-sm.btn-primary-outline:hover {
     border-color: var(--default-button-color) !important;    
     color: white !important;
 }
+button.btn.btn-sm.btn-primary-outline:active {
+    background-color: var(--default-button-color) !important;
+    border-color: var(--default-button-color) !important;    
+    color: white !important;
+}
 
 a.btn.btn-sm.btn-primary-outline:active {
     background-color: var(--default-button-color) !important;
@@ -386,5 +391,9 @@ button.btn.btn-primary-outline.disabled.ng-star-inserted:active {
 }
 
 a.btn.btn-sm.btn-primary-outline.dropdown-toggle:active {
+    background-color: var(--default-button-color) !important;
+}
+
+a.btn.btn-sm.btn-primary-outline.dropdown-toggle:active, .open>.btn-primary-outline.dropdown-toggle {
     background-color: var(--default-button-color) !important;
 }
