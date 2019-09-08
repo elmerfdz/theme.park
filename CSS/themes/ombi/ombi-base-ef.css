@@ -305,3 +305,7 @@ button.btn.btn-primary-outline {
     color: var(--default-button-color) !important;
     border-color: var(--default-button-color) !important;
 }
+
+.input-addon, .input-group-addon {
+    color: var(--default-button-color);
+}
