@@ -12,13 +12,12 @@
 /*			      https://github.com/gilbN/theme.park			 */
 
 /* OMBI DARK THEME */
-@import url(https://elmerfdz.github.io/theme.park/CSS/themes/ombi/ombi-base.css);
+@import url(https://elmerfdz.github.io/theme.park/CSS/themes/ombi/ombi-base-ef.css);
 :root {
   --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
   --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
-  --request-button: #d31256;
-  --request-button-hover: #8d0c39;
-  --loading-bar: #d31256; 
-  --accent-color: #d31256;  
 
-}
+    --default-button-color: #d31256;
+    --default-button-color-hover: #8d0c39;
+    --progress-color: #d31256;  
+  }
