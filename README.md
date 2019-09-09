@@ -93,48 +93,41 @@ Link to Firefox extention: https://addons.mozilla.org/en-US/firefox/addon/styl-u
 
 ## Current themes in the repo:
 <ul>
-<li><a href="https://github.com/gilbN/theme.park#sonarr-v2v3---radarr---lidarr---bazarr-themes">Sonarr</a></li>
-<li><a href="https://github.com/gilbN/theme.park#sonarr-v2v3---radarr---lidarr---bazarr-themes">Radarr</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#sonarr-v2v3---radarr---lidarr---bazarr-themes">Lidarr</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#sonarr-v2v3---radarr---lidarr---bazarr-themes">Bazarr</a></li>
-<li><a href="https://github.com/gilbN/theme.park#plex-themes">Plex</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#ombi-themes">Ombi</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#tautulli-themes">Tautulli</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#organizr-hotline-and-marine-theme">Organizr</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#grafana-themes">Grafana</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#sabnzbd-themes">Sabnzbd</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#nzbget-themes">Nzbget</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#nzbhydra2-themes">NZBHydra2</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#deluge-themes">Deluge</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#qbittorrent-themes">qBittorrent</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#guacamole-themes">Guacamole</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#rutorrent-themes">ruTorrent</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#netdata-themes">Netdata</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#jackett-themes">Jackett</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#html5-speedtest-themes">html5speedtest</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#filebrowser-themes">Filebrowser</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#monitorr-themes">Monitorr</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#logarr-alpha-version-themes">Logarr</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#php-library-presenter-themes">PLPP</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#synclounge-themes">Synclounge</a></li>
-<li><a href="https://github.com/gilbN/theme.park/blob/master/README.md#the-lounge-themes">The Lounge</a></li>
+<li><a href="#sonarr-v2v3---radarr---lidarr---bazarr-themes">Sonarr</a></li>
+<li><a href="#sonarr-v2v3---radarr---lidarr---bazarr-themes">Radarr</a></li>
+<li><a href="#sonarr-v2v3---radarr---lidarr---bazarr-themes">Lidarr</a></li>
+<li><a href="#sonarr-v2v3---radarr---lidarr---bazarr-themes">Bazarr</a></li>
+<li><a href="#plex-themes">Plex</a></li>
+<li><a href="#ombi-themes">Ombi</a></li>
+<li><a href="#tautulli-themes">Tautulli</a></li>
+<li><a href="#organizr-hotline-and-marine-theme">Organizr</a></li>
+<li><a href="#grafana-themes">Grafana</a></li>
+<li><a href="#sabnzbd-themes">Sabnzbd</a></li>
+<li><a href="#nzbget-themes">Nzbget</a></li>
+<li><a href="#nzbhydra2-themes">NZBHydra2</a></li>
+<li><a href="#deluge-themes">Deluge</a></li>
+<li><a href="#qbittorrent-themes">qBittorrent</a></li>
+<li><a href="#guacamole-themes">Guacamole</a></li>
+<li><a href="#rutorrent-themes">ruTorrent</a></li>
+<li><a href="#netdata-themes">Netdata</a></li>
+<li><a href="#jackett-themes">Jackett</a></li>
+<li><a href="#html5-speedtest-themes">html5speedtest</a></li>
+<li><a href="#filebrowser-themes">Filebrowser</a></li>
+<li><a href="#monitorr-themes">Monitorr</a></li>
+<li><a href="#logarr-alpha-version-themes">Logarr</a></li>
+<li><a href="#php-library-presenter-themes">PLPP</a></li>
+<li><a href="#synclounge-themes">Synclounge</a></li>
+<li><a href="#the-lounge-themes">The Lounge</a></li>
 </ul>
 
 ***
 # Organizr Hotline and Marine theme
 Custom [Organizr](https://github.com/causefx/Organizr/) themes.
 <p align="center">
-<<<<<<< HEAD
     <img src="/Screenshots/organizr-themes/organizr-hotline-theme2.png" alt="Screen Shot 1" width="49.15%" />
     <img src="/Screenshots/organizr-themes/organizr-marine-theme2.png" alt="Screen Shot 2" width="49.15%" />
     <img src="/Screenshots/organizr-themes/organizr-hotline-theme-login.png" alt="Screen Shot 3" width="49.15%" />
     <img src="/Screenshots/organizr-themes/organizr-marine-theme-login.png" alt="Screen Shot 4" width="49.15%" />	
-=======
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-hotline-theme2.png" alt="Screen Shot 1" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme2.png" alt="Screen Shot 2" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-hotline-theme-login.png" alt="Screen Shot 3" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/organizr-themes/organizr-marine-theme-login.png" alt="Screen Shot 4" width="49.15%" />
->>>>>>> dc08672102aaec165f6bec623ed510c6c0249044
 </p>
 
 
