@@ -394,7 +394,7 @@ a.btn.btn-sm.btn-primary-outline.dropdown-toggle:active {
     background-color: var(--default-button-color) !important;
 }
 
-.open>.btn-primary-outline.dropdown-toggle {
+.open>.btn-primary-outline.dropdown-toggle:after {
     color: #fff!important;
     background-color: var(--default-button-color) !important;
     border-color: var(--default-button-color) !important;
