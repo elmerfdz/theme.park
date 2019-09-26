@@ -1,4 +1,3 @@
-
 /*    dP   dP                                                                  dP        */
 /*    88   88                                                                  88        */
 /*  d8888P 88d888b. .d8888b. 88d8b.d8b. .d8888b.    88d888b. .d8888b. 88d888b. 88  .dP   */
@@ -10,18 +9,7 @@
 
 /*		   		        Made by @gilbN					 */
 /* 			      https://github.com/gilbN/theme.park			 */
-:root {
-    /* --main-bg-color:radial-gradient(ellipse, #1f1f1f, #191919, #131313, #0b0b0b, #000000) center center/cover no-repeat fixed; */
-    --modal-bg-color: radial-gradient(circle , #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
-    --main-bg-color: radial-gradient(circle, #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
-    --calendar-tv-Unaired-Premiere: #35c5f4;
-    --calendar-tv-Downloading: #7932ea; 
-    --calendar-tv-Unmonitored: grey;
-    --calendar-tv-Unaired: #337ab7;  
-    --calendar-tv-missing: #d9534f;
-    --calendar-tv-On-Air: #f0ad4e; 
-    --calendar-tv-available: #5cb85c;
-    }
+
 body {
   background: var(--main-bg-color);
   background-repeat: repeat, no-repeat;
@@ -669,6 +657,41 @@ pre {
     text-decoration: underline;
 }
 
+/* Buttons */
+
+.Button\/default\/2uiHU {
+    color: #FFF;
+    background-color: var(--button-color);
+    border-color: transparent;
+}
+.Button\/default\/2uiHU:hover {
+    border-color: transparent;
+    background-color: var(--button-color-hover) !important;
+    color: #fff;
+    }
+
+.Button\/primary\/1F1YL {
+    border-color: transparent;
+    background-color: var(--button-color);
+    color: #fff;
+    }
+      
+.Button\/primary\/1F1YL:hover {
+    border-color: transparent;
+    background-color: var(--button-color-hover) !important;
+    color: #fff;
+}
+.Button\/success\/36KsU {
+    border-color: var(--button-color);
+    background-color: var(--button-color);
+    color: #fff;
+}
+.Button\/success\/36KsU:hover {
+    border-color: var(--button-color-hover);
+    background-color: var(--button-color-hover);
+    color: #fff;
+}
+
 /* LOADING PAGE */
 .ErrorPage\/page\/3GptQ, .ErrorPage\/version\/3txe6, .LoadingMessage\/loadingMessage\/1gR5r {
     color: #FFF;
@@ -713,6 +736,10 @@ pre {
 	background-color: hsla(0,0%,100%,.08);
 	}
 
+    .CheckInput\/primaryIsChecked\/3mVN0 {
+        border-color: transparent;
+        background-color: var(--accent-color);
+    }
 /* HEADER */
 
 	.PageHeader\/header\/1IhlM {
@@ -724,7 +751,7 @@ pre {
 		border: none !important;
         background: var(--modal-bg-color);
         color: #fff !important;
-        box-shadow: 0 0 10px 1px #000000 !important;
+        box-shadow: 0 0 10px 1px transparent !important;
 	}
 	.SeriesSearchInput\/highlighted\/15xAK {
 		background-color: hsla(0,0%,100%,.08);
@@ -768,7 +795,10 @@ pre {
 	.PageSidebar\/sidebarContainer\/3Hxpq {
 		background: var(--main-bg-color) !important;
 	}
-	}
+    }
+    .PageSidebarItem\/isActiveItem\/bUesh {
+        border-left: 3px solid var(--accent-color);
+    }
 
 /* SERIES PAGE */
 
@@ -895,6 +925,19 @@ pre {
 }
 
 /* ADD NEW */
+    div[class*='EnhancedSelectInputOption'] { 
+    background-color: #1e1e1e;
+    color: #fff;
+    }
+    div[class*='EnhancedSelectInputOption']:hover { 
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    }
+    .EnhancedSelectInput\/options\/3yy65 {
+    border: 1px solid #dde6e9;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    }
 
 	/* SEARCH BAR */
 	.Input\/input\/2YWzR, .AddNewSeries\/searchIconContainer\/3QAm8, .AddNewSeries\/clearLookupButton\/1dKG7 {
@@ -920,11 +963,7 @@ pre {
         border-color: #fff;
         box-shadow: none;
     }
-	.Button\/default\/2uiHU:hover {
-    border-color: transparent;
-    background-color: hsla(0,0%,100%,.3) !important;
-    color: #fff;
-	}
+	
 	/* TEXT COLOR */
 	.PageContentBody\/innerContentBody\/tEszh {
     color: #fff;
@@ -985,11 +1024,7 @@ pre {
 	}
 
 /* CALENDAR */
-	.Button\/default\/2uiHU {
-		color: #FFF;
-		background-color: rgba(0, 0, 0, .25);
-		border-color: transparent;
-	}
+
 	.DayOfWeek\/dayOfWeek\/1iw4D {
 		background-color: hsla(0,0%,100%,.08);
     }
@@ -1027,6 +1062,12 @@ pre {
     
     .CalendarEventGroup\/seriesTitle\/ThqKe {
         color: #ffffff !important;
+    }
+    .CalendarEventGroup\/airTime\/1Z6G9 {
+        color: #eee;
+    }
+    .CalendarEventGroup\/episodeInfo\/vfg0M {
+        color: #eee;
     }
     /* calendar agenda */
     .AgendaEvent\/event\/2a83A:hover {
