@@ -50,6 +50,10 @@ body {
     color: rgba(232, 230, 227, 0.4);
 }
 
+.card .labels p {
+    color: rgb(196, 192, 183);
+}
+
 .sidebar[data-background-color="black"]::after, .sidebar[data-background-color="black"]::before, .off-canvas-sidebar[data-background-color="black"]::after, .off-canvas-sidebar[data-background-color="black"]::before {
     background-color: rgb(31, 33, 34);
 }
