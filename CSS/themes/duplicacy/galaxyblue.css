@@ -16,4 +16,5 @@
 :root {
   --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
   --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed; 
- }
+  --darkreader-inline-color: white;  
+  }
