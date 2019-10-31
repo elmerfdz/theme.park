@@ -84,3 +84,7 @@ a {
 element.style {
     color: var(--darkreader-inline-color) !important;
 }
+
+label.form-check-label {
+    color: var(--darkreader-inline-color) !important;
+}
