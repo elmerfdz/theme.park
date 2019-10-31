@@ -27,6 +27,9 @@ body {
     background-color: var(--main-bg-color);
 }
 
+.card .title {
+    color: rgb(219, 216, 211);
+}
 
 .card {
     border-radius: 6px;
