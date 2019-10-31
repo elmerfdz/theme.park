@@ -149,25 +149,16 @@ div#EF-ODTabContent {
     border-bottom-color: transparent;
 }
 
-.form-control {
-    color: rgb(201, 197, 190);
-    background-color: rgb(24, 26, 27);
-    background-image: none;
-    border-top-color: rgb(61, 61, 61);
-    border-right-color: rgb(61, 61, 61);
-    border-bottom-color: rgb(61, 61, 61);
-    border-left-color: rgb(61, 61, 61);
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px inset;
-}
-
 .form-control.border-input {
     border-top-color: rgb(78, 70, 57);
     border-right-color: rgb(78, 70, 57);
     border-bottom-color: rgb(78, 70, 57);
     border-left-color: rgb(78, 70, 57);
 }
-.form-control.border-input {
-    border: 1px solid #CCC5B9;
+.form-control {
+    background-color: rgb(57, 40, 0);
+    color: rgb(196, 192, 183);
+    box-shadow: none;
 }
 
 .form-control:focus{
