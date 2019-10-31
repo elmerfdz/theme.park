@@ -23,6 +23,11 @@ body {
 
 }
 
+.sidebar .sidebar-wrapper {
+    box-shadow: inset -1px 0px 0px 0px #DDDDDD;
+    background-color: var(--modal-bg-color) !important;
+}
+
 .modal-content {
     background-color: rgb(24, 26, 27);
     border-top-color: rgba(102, 102, 102, 0.2);
