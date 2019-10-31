@@ -76,6 +76,15 @@ body {
     color: rgb(156, 198, 207);
 }
 
+.vis-time-axis .vis-text {
+    color: rgb(204, 201, 193);
+}
+
+.vis-labelset .vis-label {
+    color: rgb(204, 201, 193);
+    border-bottom-color: rgb(64, 64, 64);
+}
+
 a {
     color: rgb(125, 190, 208);
 }
