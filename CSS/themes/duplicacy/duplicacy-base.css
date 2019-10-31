@@ -57,3 +57,12 @@ body {
 .sidebar[data-background-color="black"]::after, .sidebar[data-background-color="black"]::before, .off-canvas-sidebar[data-background-color="black"]::after, .off-canvas-sidebar[data-background-color="black"]::before {
     background-color: rgb(31, 33, 34);
 }
+
+
+.text-primary, .text-primary:hover {
+    color: rgb(156, 198, 207);
+}
+
+a {
+    color: rgb(125, 190, 208);
+}
