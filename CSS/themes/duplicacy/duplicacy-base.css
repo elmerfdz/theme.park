@@ -116,6 +116,10 @@ a {
     color: var(--darkreader-inline-color) !important;
 }
 
+hr {
+    border-color: rgb(64, 64, 64) !important;
+}
+
 .row-clickable.active {
     background-color: rgb(27, 29, 30);
 }
