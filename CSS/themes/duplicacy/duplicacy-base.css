@@ -97,6 +97,10 @@ body {
     border-left-color: rgb(64, 64, 64) !important;
 }
 
+.vis-foreground .vis-group {
+    border-bottom: 1px solid #bfbfbf !important;
+}
+
 a {
     color: rgb(125, 190, 208);
 }
