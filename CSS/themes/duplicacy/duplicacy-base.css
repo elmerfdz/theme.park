@@ -97,6 +97,13 @@ body {
     border-left-color: rgb(64, 64, 64) !important;
 }
 
+.vis-panel.vis-bottom, .vis-panel.vis-center, .vis-panel.vis-left, .vis-panel.vis-right, .vis-panel.vis-top {
+    border-top-color: rgb(64, 64, 64) !important;
+    border-right-color: rgb(64, 64, 64) !important;
+    border-bottom-color: rgb(64, 64, 64) !important;
+    border-left-color: rgb(64, 64, 64) !important;
+}
+
 .vis-foreground .vis-group {
     border-bottom-color: rgb(64, 64, 64) !important;
 }
