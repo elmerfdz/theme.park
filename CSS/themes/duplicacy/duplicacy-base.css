@@ -79,3 +79,9 @@ a {
 .row-clickable.active {
     background-color: rgb(27, 29, 30);
 }
+
+
+element.style {
+    cursor: pointer;
+    --darkreader-inline-color: #e8e6e3 !important;
+}
