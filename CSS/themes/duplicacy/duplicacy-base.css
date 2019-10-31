@@ -82,6 +82,5 @@ a {
 
 
 element.style {
-    cursor: pointer;
-    --darkreader-inline-color: #e8e6e3 !important;
+    color: var(--darkreader-inline-color) !important;
 }
