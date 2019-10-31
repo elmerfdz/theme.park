@@ -83,11 +83,6 @@ body {
 
 .vis-item {
     color: rgb(223, 220, 216) !important;
-    border-top-color: rgb(11, 49, 158) !important;
-    border-right-color: rgb(11, 49, 158) !important;
-    border-bottom-color: rgb(11, 49, 158) !important;
-    border-left-color: rgb(11, 49, 158) !important;
-    background-color: rgb(36, 38, 40) !important;
 }
 
 .vis-time-axis .vis-text {
