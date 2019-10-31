@@ -59,6 +59,10 @@ body {
     color: rgba(232, 230, 227, 0.4);
 }
 
+.ct-grid {
+    stroke: rgba(232, 230, 227, 0.2);
+}
+
 .card .labels p {
     color: rgb(196, 192, 183);
 }
@@ -83,4 +87,8 @@ a {
 
 label.form-check-label {
     color: var(--darkreader-inline-color) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2a2c2e;
 }
