@@ -23,6 +23,10 @@ body {
 
 }
 
+.content {
+    background-color: var(--main-bg-color) !important;
+}
+
 .sidebar .sidebar-wrapper {
     box-shadow: rgb(34, 36, 37) -1px 0px 0px 0px inset !important;
     background-color: var(--modal-bg-color) !important;
