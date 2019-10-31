@@ -90,6 +90,13 @@ body {
     border-bottom-color: rgb(64, 64, 64) !important;
 }
 
+.vis-timeline {
+    border-top-color: rgb(64, 64, 64);
+    border-right-color: rgb(64, 64, 64);
+    border-bottom-color: rgb(64, 64, 64);
+    border-left-color: rgb(64, 64, 64);
+}
+
 a {
     color: rgb(125, 190, 208);
 }

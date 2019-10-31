@@ -16,12 +16,4 @@
 :root {
   --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
   --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed; 
-  --darkreader-inline-color: white;
-  --calendar-tv-Unaired-Premiere: #35c5f4;
-  --calendar-tv-Downloading: #7932ea; 
-  --calendar-tv-Unmonitored: grey;
-  --calendar-tv-Unaired: #337ab7;  
-  --calendar-tv-missing: #d9534f;
-  --calendar-tv-On-Air: #f0ad4e; 
-  --calendar-tv-available: #5cb85c;
-  }
+ }
