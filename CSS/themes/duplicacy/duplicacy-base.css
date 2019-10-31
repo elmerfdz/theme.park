@@ -110,7 +110,7 @@ div#EF-ODTabContent {
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #3a3a3a;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
