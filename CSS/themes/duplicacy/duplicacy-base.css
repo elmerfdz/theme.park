@@ -24,7 +24,7 @@ body {
 }
 
 .main-panel {
-    background-color: var(--main-bg-color) !important;
+    background-color: var(--main-bg-color);
 }
 
 

@@ -12,7 +12,7 @@
 /*			      https://github.com/gilbN/theme.park			 */
 
 /* SONARR DARK THEME */
-@import url(https://gilbn.github.io/theme.park/CSS/themes/sonarr/sonarr-base.css);
+@import url(https://elmerfdz.github.io/theme.park/CSS/themes/duplicacy/duplicacy-base.css);
 :root {
   --main-bg-color: radial-gradient(ellipse at center, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;
   --modal-bg-color: radial-gradient(ellipse at top, #120A28 50%, #011628 100%) center center/cover no-repeat fixed;  
