@@ -182,3 +182,7 @@ div#EF-ODTabContent {
 .progress span {
     color: rgb(232, 230, 227);
 }
+
+.table thead tr > th, .table thead tr > td, .table tbody tr > th, .table tbody tr > td, .table tfoot tr > th, .table tfoot tr > td {
+    border-top-color: rgb(78, 70, 57);
+}
