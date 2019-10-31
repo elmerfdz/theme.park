@@ -75,3 +75,9 @@ body {
 a {
     color: rgb(125, 190, 208);
 }
+
+element.style {
+    color: black;
+    cursor: pointer;
+    --darkreader-inline-color: #e8e6e3;
+}
