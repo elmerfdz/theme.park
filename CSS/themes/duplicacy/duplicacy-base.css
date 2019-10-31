@@ -101,3 +101,23 @@ label.form-check-label {
 ::-webkit-scrollbar-thumb {
     background-color: #2a2c2e;
 }
+
+div#EF-ODTabContent {
+    border-top-color: #3a3a3a !important;
+    border-right-color: #3a3a3a !important;
+    border-left-color: #3a3a3a !important;
+    border-bottom-color: #3a3a3a !important;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: rgb(201, 197, 190);
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgb(58, 58, 58);
+    border-right-color: rgb(58, 58, 58);
+    border-left-color: rgb(58, 58, 58);
+    border-bottom-color: transparent;
+}
