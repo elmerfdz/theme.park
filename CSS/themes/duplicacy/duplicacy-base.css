@@ -169,3 +169,7 @@ div#EF-ODTabContent {
 .form-control.border-input {
     border: 1px solid #CCC5B9;
 }
+
+.form-control:focus{
+    background-color: transparent !important;
+}
