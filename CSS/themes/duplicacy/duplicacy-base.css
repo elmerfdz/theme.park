@@ -98,7 +98,7 @@ body {
 }
 
 .vis-foreground .vis-group {
-    border-bottom: 1px solid #bfbfbf !important;
+    border-bottom-color: rgb(64, 64, 64) !important;
 }
 
 a {
