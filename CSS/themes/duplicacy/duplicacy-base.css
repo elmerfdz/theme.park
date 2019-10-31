@@ -77,7 +77,7 @@ a {
 }
 
 element.style {
-    color: black;
+    color: white;
     cursor: pointer;
     --darkreader-inline-color: #e8e6e3;
 }
