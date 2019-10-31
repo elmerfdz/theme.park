@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar .sidebar-wrapper {
-    box-shadow: inset -1px 0px 0px 0px #DDDDDD;
+    box-shadow: rgb(34, 36, 37) -1px 0px 0px 0px inset !important;
     background-color: var(--modal-bg-color) !important;
 }
 
@@ -72,9 +72,9 @@ body {
     color: rgb(196, 192, 183);
 }
 
-.sidebar[data-background-color="black"]::after, .sidebar[data-background-color="black"]::before, .off-canvas-sidebar[data-background-color="black"]::after, .off-canvas-sidebar[data-background-color="black"]::before {
+/*.sidebar[data-background-color="black"]::after, .sidebar[data-background-color="black"]::before, .off-canvas-sidebar[data-background-color="black"]::after, .off-canvas-sidebar[data-background-color="black"]::before {
     background-color: rgb(31, 33, 34);
-}
+} */
 
 
 .text-primary, .text-primary:hover {
