@@ -76,3 +76,6 @@ a {
     color: rgb(125, 190, 208);
 }
 
+.row-clickable.active {
+    background-color: rgb(27, 29, 30);
+}
