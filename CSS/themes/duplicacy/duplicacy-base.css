@@ -46,3 +46,7 @@ body {
     fill: rgba(232, 230, 227, 0.4);
     color: rgba(232, 230, 227, 0.4);
 }
+
+.sidebar[data-background-color="black"]::after, .sidebar[data-background-color="black"]::before, .off-canvas-sidebar[data-background-color="black"]::after, .off-canvas-sidebar[data-background-color="black"]::before {
+    background-color: rgb(31, 33, 34);
+}
