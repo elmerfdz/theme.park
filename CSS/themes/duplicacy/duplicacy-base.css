@@ -150,14 +150,14 @@ div#EF-ODTabContent {
 }
 
 .form-control.border-input {
-    border-top-color: rgb(78, 70, 57);
+    border-top-color: rgb(78, 70, 57) ;
     border-right-color: rgb(78, 70, 57);
     border-bottom-color: rgb(78, 70, 57);
     border-left-color: rgb(78, 70, 57);
 }
 .form-control {
-    background-color: rgb(57, 40, 0);
-    color: rgb(196, 192, 183);
+    background-color: rgb(57, 40, 0) !important;
+    color: rgb(196, 192, 183) !important;
     box-shadow: none;
 }
 
