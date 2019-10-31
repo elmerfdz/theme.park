@@ -113,7 +113,7 @@ body {
 }
 
 a {
-    color: rgb(125, 190, 208);
+    color: var(--darkreader-inline-color) !important;
 }
 
 .row-clickable.active {
