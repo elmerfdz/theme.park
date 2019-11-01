@@ -48,10 +48,18 @@ body {
 }
 
 .card {
+    background-color: var(--modal-bg-color) !important;
+    color: rgb(219, 216, 211);
+    box-shadow: 0 0 13px var(--main-bg-color) !important;
+}
+
+/*
+.card {
     box-shadow: rgba(54, 48, 39, 0.5) 0px 2px 2px;
     background-color: rgb(24, 26, 27);
     color: rgb(219, 216, 211);
 }
+*/
 
 .ct-label {
     fill: rgba(0, 0, 0, 0.4);
