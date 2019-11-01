@@ -35,6 +35,10 @@ body {
     background-color: var(--sidebar-bg-color) !important;
 }
 
+.sidebar[data-background-color="black"] .logo, .off-canvas-sidebar[data-background-color="black"] .logo {
+    border-bottom: 1px solid transparent;
+}
+
 .modal-content {
     background-color: rgb(24, 26, 27);
     border-top-color: rgba(102, 102, 102, 0.2);
