@@ -111,6 +111,9 @@ body {
     border-bottom-color: rgb(64, 64, 64) !important;
     border-left-color: rgb(64, 64, 64) !important;
 }
+.vis-time-axis .vis-grid.vis-vertical {
+    border-color: rgb(64, 64, 64) !important;
+}
 
 .vis-foreground .vis-group {
     border-bottom-color: rgb(64, 64, 64) !important;
