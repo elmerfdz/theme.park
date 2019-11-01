@@ -144,6 +144,13 @@ div#EF-ODTabContent {
     border-bottom-color: #3a3a3a !important;
 }
 
+div#localTabContent {
+    border-top-color: #3a3a3a !important;
+    border-right-color: #3a3a3a !important;
+    border-left-color: #3a3a3a !important;
+    border-bottom-color: #3a3a3a !important;
+}
+
 .nav-tabs {
     border-bottom: 1px solid #3a3a3a;
 }
