@@ -179,13 +179,13 @@ div#localTabContent {
     border-left-color: rgb(78, 70, 57);
 }
 .form-control {
-    background-color: rgb(57, 40, 0) !important;
+    background-color: 212120 !important;
     color: rgb(196, 192, 183) !important;
     box-shadow: none;
 }
 
 .form-control:focus{
-    background-color: transparent !important;
+    background-color: #212120 !important;
 }
 
 .progress {
