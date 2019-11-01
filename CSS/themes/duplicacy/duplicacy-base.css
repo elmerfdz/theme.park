@@ -179,7 +179,7 @@ div#localTabContent {
     border-left-color: rgb(78, 70, 57);
 }
 .form-control {
-    background-color: 212120 !important;
+    background-color: #212120 !important;
     color: rgb(196, 192, 183) !important;
     box-shadow: none;
 }
