@@ -40,11 +40,11 @@ body {
 }
 
 .modal-content {
-    background-color: rgb(24, 26, 27);
-    border-top-color: rgba(102, 102, 102, 0.2);
-    border-right-color: rgba(102, 102, 102, 0.2);
-    border-bottom-color: rgba(102, 102, 102, 0.2);
-    border-left-color: rgba(102, 102, 102, 0.2);
+    background-color: rgb(24, 26, 27) !important;
+    border-top-color: rgba(102, 102, 102, 0.2) !important;
+    border-right-color: rgba(102, 102, 102, 0.2) !important;
+    border-bottom-color: rgba(102, 102, 102, 0.2) !important;
+    border-left-color: rgba(102, 102, 102, 0.2) !important;
     outline-color: initial;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 9px;
 }
