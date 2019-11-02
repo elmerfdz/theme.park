@@ -226,7 +226,7 @@ div#localTabContent {
 
 .fixed-header th {
     background-image: initial;
-    background-color: transparent !important;
+    background-color: rgb(24, 26, 27) !important;
 }
 
 .table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tbody>tr>th.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active, .table>thead>tr>th.active {
