@@ -236,3 +236,14 @@ div#localTabContent {
 .footer .copyright {
     color: var(--darkreader-inline-color);
 }
+
+::-webkit-scrollbar {
+    background-color: #1c1e1f;
+    color: #c5c1b9;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2c2e;
+}
