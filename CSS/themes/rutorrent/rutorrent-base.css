@@ -1506,3 +1506,12 @@ div#logoffDlg div.dlg-header { background-image: url(https://raw.githubuserconte
     color: #fff !important;
     outline: none !important;
 }
+
+div#ratioRuleList {
+    background-color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
+}
+
+.rf_rru {
+    background-color: var(--main-bg-color);
+}
