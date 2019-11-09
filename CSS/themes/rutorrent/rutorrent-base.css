@@ -1509,9 +1509,17 @@ div#logoffDlg div.dlg-header { background-image: url(https://raw.githubuserconte
 
 div#ratioRuleList {
     background-color: var(--main-bg-color) !important;
-    border-color: var(--main-bg-color) !important;
+    border-color: #251D39 !important;
 }
 
 .rf_rru {
     background-color: var(--main-bg-color) !important;
+}
+
+.lf_rru li input.TextboxNormal {
+    background-color: var(--main-bg-color) !important;
+}
+
+.lf_rru li input.TextboxFocus {
+    background-color: #1F1F1F !important;
 }
