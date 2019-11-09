@@ -1523,3 +1523,29 @@ div#ratioRuleList {
 .lf_rru li input.TextboxFocus {
     background-color: #1F1F1F !important;
 }
+
+.fxcaret {
+    background-color: var(--main-bg-color) !important;
+}
+
+div#ruleList {
+	background-color: var(--main-bg-color) !important;
+	border-color: #251D39 !important;
+}
+
+.lf_rur li input.TextboxFocus {
+    background-color: #1F1F1F !important;
+}
+
+.lf_rur li input.TextboxNormal {
+    background-color: var(--main-bg-color) !important;
+}
+
+/*
+.rf_rur {
+	background-color: var(--main-bg-color) !important;
+}*/
+
+div#ruleProps {
+    background-color: var(--main-bg-color) !important;
+}
