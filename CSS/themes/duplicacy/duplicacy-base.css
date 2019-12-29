@@ -247,3 +247,9 @@ div#localTabContent {
 ::-webkit-scrollbar-thumb {
     background-color: #2a2c2e;
 }
+
+/* Backup exclusion folder list */
+li.list-group-item.list-group-item-borderless {
+    background-color: #181a1b!important;
+    border: 1px solid #413c32;
+}
