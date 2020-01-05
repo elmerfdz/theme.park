@@ -8,8 +8,8 @@
 /*                                                  88                                   */
 /*                                                  dP					 */
 
-/*		   		        Made by @gilbN					 */
-/*			      https://github.com/gilbN/theme.park			 */
+/*		   		        Made by @elmerfdz				 */
+/*			      https://github.com/elmerfdz/theme.park			 */
 
 /* PROTECT THEME */
 
@@ -83,3 +83,12 @@
     color: var(--text-color-tertiary) !important;
 }
 
+
+.Dropdown-module_option-default-light__2gRnV.Dropdown-module_selected__3g4fj, .Dropdown-module_option-default-light__2gRnV:hover {
+    background-color: #1f1f1f;
+}
+
+.Dropdown-module_option-default__3VCDB, .Dropdown-module_option__35fXo {
+    background-color: #0d0d0d;
+    border: none !important;
+}
