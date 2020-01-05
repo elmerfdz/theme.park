@@ -85,10 +85,10 @@
 
 
 .Dropdown-module_option-default-light__2gRnV.Dropdown-module_selected__3g4fj, .Dropdown-module_option-default-light__2gRnV:hover {
-    background-color: #1f1f1f;
+    background-color: #1f1f1f !important;
 }
 
 .Dropdown-module_option-default__3VCDB, .Dropdown-module_option__35fXo {
-    background-color: #0d0d0d;
+    background-color: #0d0d0d !important;
     border: none !important;
 }
