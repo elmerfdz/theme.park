@@ -45,14 +45,32 @@
     /* color: #fff; */
 }
 
+._34KmRecsMm3k-xdy0mRdHz.VLBjta4s-q9n3HMJlBuSJ {
+    background-color: #1f1f1f !important;
+}
+
 ._2DI_Zp6C9YL_ntdeFOhiYm {
-    background-color: #0d0d0d !important;
+    background-color: #1f1f1f !important;
 }
 
 .CameraPanel__PropertyPanelHeader-sr91yl-0.dJartq {
     border: none !important;
+    background-color: #0d0d0d;
 }
 
 ._2bZMaC_ZZ5n2Y5ApUlrhGi {
     box-shadow: 0 0 13px #000 !important;
+}
+
+._3XIQiec6jEqHjD_JiF2Vtd._1sh02A_FRr6hJHV75UUOpi._2bZMaC_ZZ5n2Y5ApUlrhGi._3xSt6UczwYp2mRvphKkKux._31NM611_W7WOEJO3N9obWC {
+    border: none !important;
+}
+
+/* Side control pannels */
+.PanelFooterForm__FieldArea-sc-3le9ui-1.eWvKNF {
+    background-color: #1f1f1f !important;
+}
+
+.type-ubnt-title, .type-ubnt-title-secondary {
+    color: #FFF !important;
 }
