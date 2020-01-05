@@ -12,3 +12,8 @@
 
 /* PROTECT DARK THEME */
 @import url(https://elmerfdz.github.io/theme.park/CSS/themes/protect/protect-base.css);
+:root {
+--text-color-primary: #FFF;
+--text-color-secondary: #FFF;
+--text-color-tertiary: #FFF;
+}

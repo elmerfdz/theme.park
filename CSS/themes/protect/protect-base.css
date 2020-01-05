@@ -72,5 +72,9 @@
 }
 
 .type-ubnt-title, .type-ubnt-title-secondary {
-    color: #FFF !important;
+    color: var(--text-color-secondary) !important;
+}
+
+.AyKm3GUhZ5M6MRHgtnwvc {
+    color: var(--text-color-secondary) !important;
 }
