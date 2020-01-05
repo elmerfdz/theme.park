@@ -12,9 +12,3 @@
 
 /* PROTECT DARK THEME */
 @import url(https://elmerfdz.github.io/theme.park/CSS/themes/protect/protect-base.css);
-:root {
-  --main-bg-color: radial-gradient(circle, #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
-  --modal-bg-color: radial-gradient(circle , #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
-    --link-color: #e5a00d;
-    --link-color-hover: #f2ad18;
-  }
