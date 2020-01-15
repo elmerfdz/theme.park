@@ -110,8 +110,8 @@
 
 .Table-module_row__3TH83.Table-module_light__3WnbZ {
     background-color: #1f1f1f !important;
-    border-bottom: 1px solid #2b2b2b;
-}
+    border-bottom: 1px solid #2b2b2b !important;
+}   
 
 tr.Table-module_row__3TH83.Table-module_light__3WnbZ.Table-module_selected__1bDcT.Table-module_hovered__3wPKk {
     background-color: #1f1f1f !important;
