@@ -172,6 +172,12 @@ section.Popover-module_popover__37iIL.Popover-module_bottomLeft__1oVHK.Popover-m
     box-shadow: 0 0 13px var(--side-panel-drop-shadow-color,rgba(0,0,0,.1)) !important;
 }
 
+/*Scroll bar*/
 ::-webkit-scrollbar-corner {background-color:  hsla(0,0%,100%,.08) !important;}
 ::-webkit-scrollbar {width: 6px;height: 10px;background: transparent !important;}
 ::-webkit-scrollbar-thumb {border-radius: 10px;background-color: hsla(0,0%,100%,.08) !important;}
+
+/* Search text*/
+input._20cgZK7m-PPo0NSJUij--._1bAJ4OoUMfDm5stC2M5I51._3tcr7It7vQ83M_zH0zqeUh._24SdJU-Ey_mtLDHfvbcpX_.-pBxl91N5mil46P6mLV4C {
+    color: white !important;
+}
