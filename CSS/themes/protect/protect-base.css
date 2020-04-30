@@ -70,6 +70,7 @@
 
 .CameraPanel__PropertyPanelHeader-sr91yl-0.cqvFvF {
     background-color: #0d0d0d !important;
+    border-color: #19191a !important;
 }
 
 .PanelFooterForm__FieldArea-sc-3le9ui-1.eWvKNF {
@@ -78,6 +79,14 @@
 
 .CameraPanelZones__FieldArea-sc-1keaatp-1.loSrRF {
     background-color: #1f1f1f !important; 
+}
+
+.CameraPanelAbout__FieldArea-sc-21b3ez-4.kBtFXW {
+    background-color: #1f1f1f !important;
+}
+
+.CameraPanelManage__FieldArea-idu2r2-3.dNdTdt {
+    background-color: #1f1f1f !important;
 }
 
 .type-ubnt-title, .type-ubnt-title-secondary {
