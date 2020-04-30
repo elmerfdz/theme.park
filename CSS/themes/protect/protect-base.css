@@ -172,6 +172,6 @@ section.Popover-module_popover__37iIL.Popover-module_bottomLeft__1oVHK.Popover-m
     box-shadow: 0 0 13px var(--side-panel-drop-shadow-color,rgba(0,0,0,.1)) !important;
 }
 
-::-webkit-scrollbar-corner {background-color:  hsla(0,0%,100%,.08);}
-::-webkit-scrollbar {width: 6px;height: 10px;background: transparent;}
+::-webkit-scrollbar-corner {background-color:  hsla(0,0%,100%,.08) !important;}
+::-webkit-scrollbar {width: 6px;height: 10px;background: transparent !important;}
 ::-webkit-scrollbar-thumb {border-radius: 10px;background-color: hsla(0,0%,100%,.08) !important;}
