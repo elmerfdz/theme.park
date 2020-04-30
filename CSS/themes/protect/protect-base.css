@@ -67,8 +67,17 @@
 }
 
 /* Side control pannels */
+
+.CameraPanel__PropertyPanelHeader-sr91yl-0.cqvFvF {
+    background-color: #1f1f1f !important;
+}
+
 .PanelFooterForm__FieldArea-sc-3le9ui-1.eWvKNF {
     background-color: #1f1f1f !important;
+}
+
+.CameraPanelZones__FieldArea-sc-1keaatp-1.loSrRF {
+    background-color: #1f1f1f !important; 
 }
 
 .type-ubnt-title, .type-ubnt-title-secondary {
