@@ -164,10 +164,10 @@ section.Popover-module_popover__37iIL.Popover-module_bottomLeft__1oVHK.Popover-m
 
 /* Filters*/
 ._14NGDpiqy0efkZifMaErK-, ._2bmn7FS0M9YVSLO_pNFS6f {
-    border-top: 1px solid var(--header-panel-border-color,#19191a);
+    border-top: 1px solid var(--header-panel-border-color,#19191a) !important;
 }
 
 ._2ooPfN1X_c7Is17mrhlA_F {
-    --side-panel-border-right: 1px solid var(--side-panel-border-color,#19191a);
+    --side-panel-border-right: 1px solid var(--side-panel-border-color,#19191a) !important;
     box-shadow: 6px -2px 40px 0 var(--side-panel-drop-shadow-color,rgba(0,0,0,.1));
 }
