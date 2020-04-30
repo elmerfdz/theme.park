@@ -169,5 +169,5 @@ section.Popover-module_popover__37iIL.Popover-module_bottomLeft__1oVHK.Popover-m
 
 ._2ooPfN1X_c7Is17mrhlA_F {
     --side-panel-border-right: 1px solid var(--side-panel-border-color,#19191a) !important;
-    box-shadow: 6px -2px 40px 0 var(--side-panel-drop-shadow-color,rgba(0,0,0,.1));
+    box-shadow: 0 0 13px var(--side-panel-drop-shadow-color,rgba(0,0,0,.1)) !important;
 }
