@@ -37,18 +37,18 @@ body {
 }
 
 .navbar-default {
-    background-color: rgb(26, 28, 29);
-    border-top-color: rgb(56, 56, 56);
-    border-right-color: rgb(56, 56, 56);
-    border-bottom-color: rgb(56, 56, 56);
-    border-left-color: rgb(56, 56, 56);
+    background-color: rgb(26, 28, 29) !important;
+    border-top-color: rgb(56, 56, 56) !important;
+    border-right-color: rgb(56, 56, 56) !important;
+    border-bottom-color: rgb(56, 56, 56) !important;
+    border-left-color: rgb(56, 56, 56) !important;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-top-color: rgb(56, 56, 56);
-    border-right-color: rgb(56, 56, 56);
-    border-bottom-color: rgb(56, 56, 56);
-    border-left-color: rgb(56, 56, 56);
+    border-top-color: rgb(56, 56, 56) !important;
+    border-right-color: rgb(56, 56, 56) !important;
+    border-bottom-color: rgb(56, 56, 56) !important;
+    border-left-color: rgb(56, 56, 56) !important;
 }
 
 .footer {
