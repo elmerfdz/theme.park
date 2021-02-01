@@ -19,7 +19,7 @@ body {
   -webkit-background-size: auto, cover;
   -moz-background-size: auto, cover;
   -o-background-size: auto, cover;
-  color: #ffffff;
+  color: #ffffff !important;
 
 }
 
