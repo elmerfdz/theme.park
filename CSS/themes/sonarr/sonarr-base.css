@@ -19,8 +19,11 @@ body {
   -webkit-background-size: auto, cover;
   -moz-background-size: auto, cover;
   -o-background-size: auto, cover;
-  color: #ffffff !important;
+  color: #ffffff;
+}
 
+html, body {
+    color: #FFF !important;
 }
 
 /* VERSION */
