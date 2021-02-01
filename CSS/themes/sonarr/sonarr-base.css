@@ -1149,3 +1149,14 @@ pre {
 .FilterBuilderRow\/filterRow\/1ozij:hover {
     background-color: transparent;
 }
+
+/* show page links and header colours */
+.Link\/link\/1rgM9 {
+    color: white !important;
+}
+.TableRowCell\/cell\/2fbg4 {
+    color: white !important;
+}
+.TableHeaderCell\/headerCell\/DbapO {
+    color: white !important;
+}
