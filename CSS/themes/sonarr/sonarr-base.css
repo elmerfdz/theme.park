@@ -19,11 +19,8 @@ body {
   -webkit-background-size: auto, cover;
   -moz-background-size: auto, cover;
   -o-background-size: auto, cover;
-  color: #ffffff;
-}
+  color: var(--text);
 
-html, body {
-    color: #FFF !important;
 }
 
 /* VERSION */
@@ -218,10 +215,7 @@ html, body {
 .episode-title-cell {
     color: #ffffff;
 }
-a, .episode-title-cell {
-    color: #FFFFFF !important;
-    text-decoration: none;
-}
+
 th.sortable:hover, .table-hover > tbody > tr:hover {
     background-color: rgba(0, 0, 0, .25);
     color: #ffffff;
@@ -292,38 +286,38 @@ div.form-group > label {
 /* Calendar page */
     /* Unaired Premiere */
     .calendar .premiere {
-        border-color: var(--calendar-tv-Unaired-Premiere);
-        background-color: var(--calendar-tv-Unaired-Premiere);
+        border-color: rgb(var(--calendar-tv-Unaired-Premiere));
+        background-color: rgb(var(--calendar-tv-Unaired-Premiere));
     }
     /* Downloading */
     .calendar .purple {
-        border-color: var(--calendar-tv-Downloading);
-        background-color: var(--calendar-tv-Downloading);
+        border-color: rgb(var(--calendar-tv-Downloading));
+        background-color: rgb(var(--calendar-tv-Downloading));
     }
     /* Downloading */
     .calendar .unmonitored {
-        border-color: var(--calendar-tv-Unmonitored);
-        background-color: var(--calendar-tv-Unmonitored);
+        border-color: rgb(var(--calendar-tv-Unmonitored));
+        background-color: rgb(var(--calendar-tv-Unmonitored));
     }
     /* Unaired */
     .calendar .primary {
-        border-color: var(--calendar-tv-Unaired);
-        background-color: var(--calendar-tv-Unaired);
+        border-color: rgb(var(--calendar-tv-Unaired));
+        background-color: rgb(var(--calendar-tv-Unaired));
     }
     /* Missing */
     .calendar .danger {
-        border-color: var(--calendar-tv-missing);
-        background-color: var(--calendar-tv-missing);
+        border-color: rgb(var(--calendar-tv-missing));
+        background-color: rgb(var(--calendar-tv-missing));
     }
     /* On Air */
     .calendar .warning {
-        border-color: var(--calendar-tv-On-Air);
-        background-color: var(--calendar-tv-On-Air);
+        border-color: rgb(var(--calendar-tv-On-Air));
+        background-color: rgb(var(--calendar-tv-On-Air));
     }
     /* Downloaded*/
     .calendar .success {
-        border-color: var(--calendar-tv-available);
-        background-color: var(--calendar-tv-available);
+        border-color: rgb(var(--calendar-tv-available));
+        background-color: rgb(var(--calendar-tv-available));
     }
 
 .event .primary {
@@ -645,21 +639,22 @@ pre {
 /* VERSION 2 */
 /* Froms */
 .FormInputHelpText\/helpText\/3_AVV {
-    color: #ffffff;
+    color: var(--text);
 }
 .FormInputGroup\/inputUnit\/19QXo {
     color: #eee !important;
   }
 
 /* LINKS */
-.Link\/to\/6fmSq {
-    color: #FFF;
-}
-.Link\/to\/6fmSq:hover {
-    color: #FFF;
-    text-decoration: underline;
-}
+.Link\/to\/6fmSq {color: var(--text);}
+.Link\/to\/6fmSq:hover {color: var(--text-hover);}
 
+a {color: var(--link-color);}
+a:hover {color: var(--link-color-hover);}
+
+.TableRowCell\/cell\/2fbg4 .Link\/to\/6fmSq {color: var(--link-color);}
+
+.TableRowCell\/cell\/2fbg4 .Link\/to\/6fmSq:hover {color: var(--link-color-hover);}
 /* Buttons */
 
 .Button\/default\/2uiHU {
@@ -697,7 +692,7 @@ pre {
 
 /* LOADING PAGE */
 .ErrorPage\/page\/3GptQ, .ErrorPage\/version\/3txe6, .LoadingMessage\/loadingMessage\/1gR5r {
-    color: #FFF;
+    color: var(--text);
 }
 .LoadingIndicator\/ripple\/358v5 {
   border: 2px solid #fff;
@@ -707,16 +702,16 @@ pre {
 .ModalHeader\/modalHeader\/gpcvG {
     background: var(--modal-bg-color);
     color: #fff;
-    border-bottom: 1px solid hsla(0,0%,100%,.08);
+    border-bottom: var(--accent-color);
 }
 .ModalContent\/modalContent\/-txrl {
     background: var(--modal-bg-color);
-    color: #fff;
+    color: var(--text);
 }
 .ModalFooter\/modalFooter\/1N5Ku {
     background: var(--modal-bg-color);
     color: #fff;
-    border-top: 1px solid hsla(0,0%,100%,.08);
+    border-top: 1px solid var(--accent-color);
 }
 .ModalContent\/closeButton\/37Puk:hover {
     color: #fff;
@@ -750,7 +745,7 @@ pre {
 	}
 
 	/* SEARCH DROPDOWN HEADER */
-	.SeriesSearchInput\/seriesContainer\/2yDTR {
+	.SeriesSearchInput\/containerOpen\/3F8xe .SeriesSearchInput\/seriesContainer\/2yDTR {
 		border: none !important;
         background: var(--modal-bg-color);
         color: #fff !important;
@@ -772,12 +767,12 @@ pre {
     
 
 /* SIDE MENU */
-	.PageSidebar\/sidebar\/2UXc0 {
-		background-color: rgba(0, 0, 0, .45);
-	}
 	.PageSidebar\/sidebarContainer\/3Hxpq {
-		background-color: rgba(0, 0, 0, .45) !important;
-	}
+		background-color: rgba(0, 0, 0, .25);
+    }
+    .PageSidebarItem\/iconContainer\/1j_mq {
+        color: white;
+    }
 	.PageSidebar\/sidebar\/3IOcI {
 		background-color: transparent;
 	}
@@ -823,7 +818,15 @@ pre {
   text-decoration: none;
   }
   .ProgressBar\/container\/14z4A {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.TableRow\/row\/33xJE .ProgressBar\/primary\/3YDfb {
+    background-color: var(--accent-color) !important;
+}
+
+.ProgressBar\/purple\/3DlHm {
+    background-color: var(--accent-color);
 }
 	/* SHOW PAGE */
 	.SeriesDetailsSeason\/season\/3XIYa, .SeriesDetailsSeason\/collapseButtonContainer\/3XxzX {
@@ -850,24 +853,33 @@ pre {
     color: #fff;
 	}
 	.Table\/table\/2C3O8 {
-    color: #fff;
-	}
+    color: var(--text);
+    }
 	.SeriesDetailsSeason\/collapseButtonContainer\/trs6s {
 	border: none !important;
     background-color: rgba(0, 0, 0, .25) !important;
 	}
 	.Popover\/title\/326tA, .SeasonInfo\/title\/1tid_, .Popover\/body\/10Yh7 {
-		background-color: #232323 !important;
+		background: var(--modal-bg-color) !important;
 	}
 	.Tooltip\/tooltipContainer\/2693s {
 	color: #fff;
     }
+    .Tooltip\/tooltip\/3HJXy.Tooltip\/inverse\/yMvcm {
+        background: var(--modal-bg-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .Tooltip\/bottom\/3Ewbi.Tooltip\/inverse\/yMvcm {
+        border-bottom-color: #fff;
+    }
     .Tooltip\/bottom\/3Ewbi.Tooltip\/default\/2NTKh {
-        border-bottom-color: #232323;
-      }
+        border-bottom-color: #fff !important;
+    }
+    .Tooltip\/right\/2MxTa.Tooltip\/default\/2NTKh {
+        border-right-color: #fff !important;
+    }    
     .EpisodeTitleLink\/link\/3ynTw:hover {
-        color: #ffffff;
-        text-decoration: none;
+        color: var(--link-color-hover);
     }
     .IconButton\/button\/2qiGi:hover {
         background-color: transparent;
@@ -876,6 +888,29 @@ pre {
     .IconButton\/button\/2qiGi {
         color: #bac5cc;
     }
+    .Label\/default\/2AF1C {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+    }
+    .Label\/info\/3YD3Y {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        color: #fff;
+    }
+    .PageSidebarItem\/status\/34pTa > .Label\/info\/3YD3Y {
+        border-color: var(--queue-color);
+        background-color: var(--queue-color);
+        color: #fff;
+    }
+    .ProtocolLabel\/torrent\/3aqvR {
+        border-color: #00853d !important;
+        background-color: #00853d !important;
+    }
+    .ProtocolLabel\/usenet\/3qKV1 {
+
+        border-color: #17b1d9 !important;
+        background-color: #17b1d9 !important;
+      }
   /* Table options*/
   .TableOptionsColumn\/column\/2H7ic {
     background: rgba(0, 0, 0, .25);
@@ -887,7 +922,10 @@ pre {
 	.PageToolbar\/toolbar\/1Lo1N {
 		background-color: rgba(0, 0, 0, .25);
 		color: hsla(0,0%,100%,.7);
-	}
+    }
+    .PageToolbarButton\/label\/10YbS {
+        color: var(--text);
+    }
 	/* POSTERS */
 	.SeriesIndexPoster\/title\/263Pq, .SeriesIndexPoster\/nextAiring\/1FZy6, .SeriesIndexPosterInfo\/info\/2JsCg {
 		background-color: rgba(255, 255, 255, 0.08);
@@ -937,7 +975,7 @@ pre {
     color: #fff;
     }
     .EnhancedSelectInput\/options\/3yy65 {
-    border: 1px solid #dde6e9;
+    border: 1px solid #1e1e1e;
     border-radius: 4px;
     background-color: #1e1e1e;
     }
@@ -966,16 +1004,19 @@ pre {
         border-color: #fff;
         box-shadow: none;
     }
+    ::placeholder {color: #eee;}
+    :-ms-input-placeholder {color: #eee;}
+    ::-webkit-input-placeholder {color: #eee ;}
 	
 	/* TEXT COLOR */
 	.PageContentBody\/innerContentBody\/tEszh {
-    color: #fff;
+    color: var(--text);
 	}
 	/* SEARCH RESULTS */
-	.AddNewSeriesSearchResult\/searchResult\/xR8dj {
-    background-color: rgba(0, 0, 0, .25) !important;
-	}
-	.AddNewSeriesSearchResult\/searchResult\/xR8dj:hover {
+    .AddNewSeriesSearchResult\/underlay\/11FBP {
+    background-color: rgba(0, 0, 0, .0) !important;
+    }
+    .AddNewSeriesSearchResult\/underlay\/11FBP:hover {
     background-color: hsla(0,0%,100%,.08) !important;
     }
     .AddNewSeriesModalContent\/year\/t7IIJ {
@@ -989,7 +1030,7 @@ pre {
 
 	.FieldSet\/legend\/3x6NF {
     color: #FFF;
-    border-bottom: 1px solid hsla(0,0%,100%,.08);
+    border-bottom: 1px solid var(--accent-color);
 	}
 	.TableRow\/row\/33xJE:hover {
     background-color: hsla(0,0%,100%,.08);
@@ -1001,7 +1042,10 @@ pre {
 	.ImportSeriesSelectSeries\/button\/3CL3L {
     border: none !important;
     background-color: rgba(0, 0, 0, .25) !important;
-	}
+    }
+    .ImportSeriesSearchResult\/series\/2BXMC:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    }
 	.ImportSeriesSelectSeries\/content\/3oSDj, .ImportSeriesSelectSeries\/searchIconContainer\/1wOES {
     border: none !important;
     background-color: #323232 !important;
@@ -1027,7 +1071,54 @@ pre {
 	}
 
 /* CALENDAR */
-
+.CalendarEvent\/downloaded\/2vSrJ {
+    background: rgb(var(--calendar-tv-available) / .7) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/downloaded\/2vSrJ:hover {
+    background: rgb(var(--calendar-tv-available) / .5) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/missing\/1y6vZ {
+    background: rgb(var(--calendar-tv-missing) / .7) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/missing\/1y6vZ:hover {
+    background: rgb(var(--calendar-tv-missing) / .5) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/unaired\/3aHdN {
+    background: rgb(var(--calendar-tv-Unaired) / .7) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/unaired\/3aHdN:hover {
+    background: rgb(var(--calendar-tv-Unaired) / .5) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/unmonitored\/Zvc-m {
+    background: rgb(var(--calendar-tv-Unmonitored) / .7) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/unmonitored\/Zvc-m:hover {
+    background: rgb(var(--calendar-tv-Unmonitored) / .5) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/onAir\/dwaU_ {
+    background: rgb(var(--calendar-tv-On-Air) / .7) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/onAir\/dwaU_:hover {
+    background: rgb(var(--calendar-tv-On-Air) / .5) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/downloading\/1kwSO {
+    background: rgb(var(--calendar-tv-Downloading) / .7) !important;
+    border-left-color: transparent !important;
+}
+.CalendarEvent\/downloading\/1kwSO:hover {
+    background: rgb(var(--calendar-tv-Downloading) / .5) !important;
+    border-left-color: transparent !important;
+}
 	.DayOfWeek\/dayOfWeek\/1iw4D {
 		background-color: hsla(0,0%,100%,.08);
     }
@@ -1055,10 +1146,7 @@ pre {
 	.CalendarEvent\/event\/3Uyb9 {
 		border-bottom: none !important;
 	}
-	.CalendarEvent\/event\/3Uyb9:hover {
-		background-color: hsla(0,0%,100%,.08) !important;
-		border-bottom: none !important;
-    }
+
     .CalendarEventGroup\/eventGroup\/gWPtK {
         border-bottom: 1px solid hsla(0,0%,100%,.08) !important;
     }
@@ -1076,13 +1164,32 @@ pre {
     .AgendaEvent\/event\/2a83A:hover {
         background-color: hsla(0,0%,100%,.08) !important;
     }
-
+/*QUEUE PAGE */
+    /* Manual Import*/
+.SelectEpisodeModalContent\/path\/1Okqk {
+    color: #eee;
+}
 /* SETTINGS */
 
 	.Settings\/summary\/3KPAv {
 		color: #fff;
 	}
-
+	/* MEDIA MANAGEMENT - FILE NAME TOKENS */
+	.NamingOption\/option\/giCGd {
+	    border: 1px solid transparent;
+	}
+	.NamingOption\/token\/1y5bz {
+	    background-color: rgba(255, 255, 255, 0.15);
+	}
+	.NamingOption\/example\/RNR6x {
+	    background-color: rgba(255, 255, 255, 0.25);
+	}
+	.NamingOption\/option\/giCGd:hover .NamingOption\/token\/1y5bz  {
+	    background-color: rgba(255, 255, 2550, 0.25);
+	}
+	.NamingOption\/option\/giCGd:hover .NamingOption\/example\/RNR6x {
+	    background-color: rgba(255, 255, 2550, 0.35);
+	}
 	/* PROFILES */
 	.Card\/card\/1iGZk, .QualityProfiles\/addQualityProfile\/2U2Io {
     background-color: rgba(0,0,0,.45);
@@ -1112,14 +1219,23 @@ pre {
 	background-color: transparent;
     border: none;
     color: #c2c6c8;
-	}
+    }
+    
+    /* INDEXERS */
 
 	/* DOWNLOAD CLIENTS */
 	.DownloadClients\/center\/FvACx {
 	background-color: transparent;
     border: none;
     color: #c2c6c8;
-	}
+    }
+
+    /*INPORT LISTS */
+    .ImportLists\/center\/17Qdu{
+        background-color: transparent;
+        border: none;
+        color: #c2c6c8;
+    }
 
 	/* CONNECTIONS */
 	.Notifications\/center\/8iwmy {
@@ -1133,7 +1249,7 @@ pre {
     border-color: transparent;
     background-color: rgba(0, 0, 0, 0.25);
     color: #FFC107;
-}
+    }
 
 /* Login Page */
 
@@ -1152,18 +1268,18 @@ pre {
 .FilterBuilderRow\/filterRow\/1ozij:hover {
     background-color: transparent;
 }
-
-/* show page links and header colours */
-.Link\/link\/1rgM9 {
-    color: #FFF !important;
-}
-.TableRowCell\/cell\/2fbg4 {
-    color: #FFF !important;
-}
-.TableHeaderCell\/headerCell\/DbapO {
-    color: #FFF !important;
+.CustomFilter\/customFilter\/zBSMd:hover {
+    background-color: hsla(0,0%,100%,.08);
 }
 
-th.TableHeaderCell\/headerCell\/DbapO {
-    color: #FFF !important;
+
+/* Scene information */
+.ReleaseSceneIndicator\/levelNone\/k-rVx {
+    border-color: var(--text);
+    color: var(--text);
+    opacity: 1;
+}
+.ReleaseSceneIndicator\/levelMapped\/3i7w4 {
+    border-color: var(--text);;
+    color: var(--text);;
 }
