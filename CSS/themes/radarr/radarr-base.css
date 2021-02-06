@@ -295,34 +295,34 @@ div.form-group > label {
 /* Calendar page */
     /* In Cinemas */
     .calendar .premiere {
-        border-color: var(--calendar-in-cinemas);
-        background-color: var(--calendar-in-cinemas);
+        border-color: rgb(var(--calendar-in-cinemas));
+        background-color: rgb(var(--calendar-in-cinemas));
     }
     /* Missing */
     .calendar .danger {
-        border-color: var(--calendar-missing);
-        background-color: var(--calendar-missing);
+        border-color: rgb(var(--calendar-missing));
+        background-color: rgb(var(--calendar-missing));
         color: #fff;
     }
     /* Announced */
     .calendar .primary {
-        border-color: var(--calendar-announced);
-        background-color: var(--calendar-announced);
+        border-color: rgb(var(--calendar-announced));
+        background-color: rgb(var(--calendar-announced));
     }
     /* Downloaded */
     .calendar .success {
-        border-color: var(--calendar-downloaded);
-        background-color: var(--calendar-downloaded);
+        border-color: rgb(var(--calendar-downloaded));
+        background-color: rgb(var(--calendar-downloaded));
     }
     /* Downloading */
     .calendar .purple {
-        border-color: var(-calendar-downloading);
-        background-color: var(-calendar-downloading);
+        border-color: rgb(var(-calendar-downloading));
+        background-color: rgb(var(-calendar-downloading));
     }
     /* Unmonitored */
     .calendar .unmonitored {
-        border-color: var(--calendar-unmonitored);
-        background-color: var(--calendar-unmonitored);
+        border-color: rgb(var(--calendar-unmonitored));
+        background-color: rgb(var(--calendar-unmonitored));
     }
 
     .event .primary {
@@ -404,6 +404,9 @@ a:focus, a:hover {
 }
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: hsla(0,0%,100%,.08);
+}
+.TableRowCell-cell-2fbg4 .ProgressBar-primary-3YDfb {
+    background-color: var(--accent-color);
 }
 
 /* Season Pass */
@@ -732,7 +735,7 @@ pre {
 .ModalHeader-modalHeader-gpcvG {
     background: var(--modal-bg-color);
     color: #fff;
-    border-bottom: 1px solid hsla(0,0%,100%,.08);
+    border-bottom: 1px solid var(--accent-color);
 }
 .ModalContent-modalContent--txrl {
     background: var(--modal-bg-color);
@@ -741,7 +744,7 @@ pre {
 .ModalFooter-modalFooter-1N5Ku {
     background: var(--modal-bg-color);
     color: #fff;
-    border-top: 1px solid hsla(0,0%,100%,.08);
+    border-top: 1px solid var(--accent-color);
 }
 .ModalContent-closeButton-37Puk:hover {
     color: #fff;
@@ -854,12 +857,10 @@ pre {
   .MovieIndexOverview-link-1i54B:hover {
   text-decoration: none;
   }
-  .ProgressBar-container-14z4A {
+  .TableRowCell-cell-2fbg4 .ProgressBar-container-14z4A {
     background-color: rgba(0, 0, 0, 0.25);
 }
-.ProgressBar-primary-3YDfb {
-    background-color: var(--accent-color);
-}
+
 .ProgressBar-purple-3DlHm {
     background-color: var(--accent-color);
 }
@@ -902,17 +903,17 @@ pre {
 	border: none !important;
     background-color: rgba(0, 0, 0, .25) !important;
 	}
-	.Popover-title-326tA, .SeasonInfo-title-1tid_, .Popover-body-10Yh7 {
-		background-color: #232323 !important;
+	.Popover-title-326tA, .SeasonInfo-title-1tid_, .Popover-body-10Yh7,.Tooltip-body-kGG0h {
+		background: var(--modal-bg-color) !important;
 	}
 	.Tooltip-tooltipContainer-2693s {
 	color: #fff;
     }
     .Tooltip-bottom-3Ewbi.Tooltip-default-2NTKh {
-        border-bottom-color: #232323;
+        border-bottom-color: #eee;
       }
-      Tooltip-right-2MxTa.Tooltip-default-2NTKh {
-        border-right-color: #232323;
+      .Tooltip-right-2MxTa.Tooltip-default-2NTKh {
+        border-right-color: #eee;
     }
     .EpisodeTitleLink-link-3ynTw:hover {
         color: #ffffff;
@@ -1069,7 +1070,7 @@ pre {
 
 	.FieldSet-legend-3x6NF {
     color: #FFF;
-    border-bottom: 1px solid hsla(0,0%,100%,.08);
+    border-bottom: 1px solid var(--accent-color);
 	}
 	.TableRow-row-33xJE:hover {
     background-color: hsla(0,0%,100%,.08);
@@ -1092,6 +1093,14 @@ pre {
     }
 
 /* DISCOVER */
+.DiscoverMovieOverview-link-3ukU2 {
+    display: block;
+    color: #eee;
+}
+.DiscoverMovieOverview-link-3ukU2:hover {
+    color: #fff;
+    text-decoration: none;
+}
 /*Title*/
 .AddListMovieOverview-link-3_RaH {
     color: #eee;
@@ -1106,6 +1115,11 @@ pre {
 .PageJumpBarItem-jumpBarItem-3F58I:hover {
     color: #fff;
     background: hsla(0,0%,100%,.08);
+}
+/*Posters*/
+.AddListMoviePoster-title-2qKvg {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
 }
 /* MASS EDITOR */
 	/* FOOTER */
@@ -1126,7 +1140,46 @@ pre {
 	}
 
 /* CALENDAR */
-
+  .CalendarEvent-downloaded-2vSrJ {
+    background: rgb(var(--calendar-available) / .7) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-downloaded-2vSrJ:hover {
+    background: rgb(var(--calendar-available) / .5) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-missing-1y6vZ {
+    background: rgb(var(--calendar-missing) / .7) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-missing-1y6vZ:hover {
+    background: rgb(var(--calendar-missing) / .5) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-unreleased-mSAoI {
+    background: rgb(var(--calendar-Unaired) / .7) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-unreleased-mSAoI:hover {
+    background: rgb(var(--calendar-Unaired) / .5) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-unmonitored-Zvc-m {
+    background: rgb(var(--calendar-Unmonitored) / .7) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-unmonitored-Zvc-m:hover {
+    background: rgb(var(--calendar-Unmonitored) / .5) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-downloading-1kwSO {
+    background: rgb(var(--calendar-Downloading) / .7) !important;
+    border-left-color: transparent !important;
+  }
+  .CalendarEvent-downloading-1kwSO:hover {
+    background: rgb(var(--calendar-Downloading) / .5) !important;
+    border-left-color: transparent !important;
+  }
 	.DayOfWeek-dayOfWeek-1iw4D {
 		background-color: hsla(0,0%,100%,.08);
     }
@@ -1157,10 +1210,7 @@ pre {
 	.CalendarEvent-event-3Uyb9 {
 		border-bottom: none !important;
 	}
-	.CalendarEvent-event-3Uyb9:hover {
-		background-color: hsla(0,0%,100%,.08) !important;
-		border-bottom: none !important;
-    }
+
     .CalendarEventGroup-eventGroup-gWPtK {
         border-bottom: 1px solid hsla(0,0%,100%,.08) !important;
     }
@@ -1242,26 +1292,35 @@ pre {
 	background-color: transparent;
     border: none;
     color: #c2c6c8;
-	}
+    }
 
 	/* CONNECTIONS */
 	.Notifications-center-8iwmy {
 	background-color: transparent;
     border: none;
     color: #c2c6c8;
-	}
+    }
+
+    /* LISTS */
+    .ImportLists-center-17Qdu{
+        background-color: transparent;
+        border: none;
+        color: #c2c6c8;
+    }
 
 	/* LOG */
 	.Alert-info-1J8mE {
     border-color: transparent;
     background-color: rgba(0, 0, 0, 0.25);
     color: #FFC107;
-}
+    }
+    
     /* INDEXER */
     .Restrictions-center-3ngzk {
         border: 1px solid transparent;
         background-color: transparent;
     }
+
     /* LISTS */
     .NetImports-center-3otL- {
         border: 1px solid transparent;
